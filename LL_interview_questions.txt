@@ -1,0 +1,230 @@
+============================================================
+             AI SDET INTERVIEW PREPARATION
+          TARGET: 20 LPA | STARTUP TO MID-LEVEL
+============================================================
+
+PART 1: LANGCHAIN – 50 QUESTIONS
+============================================================
+
+SECTION 1: LANGCHAIN FUNDAMENTALS (1–8)
+
+1. What is LangChain? What problems does it solve?
+2. What is the difference between LangChain and directly
+   calling the OpenAI API?
+3. Explain the architecture of a basic LangChain application.
+4. What are the major components of LangChain?
+5. What is the difference between an LLM and a ChatModel?
+6. What are temperature, top_p and top_k in LLMs?
+7. What is the difference between invoke(), stream() and
+   ainvoke()?
+8. How does LangChain support integration with different
+   LLM providers?
+
+SECTION 2: PROMPTS, MODELS AND OUTPUT PARSERS (9–16)
+
+9. What is a PromptTemplate? How is it different from
+   ChatPromptTemplate?
+10. What are SystemMessage, HumanMessage and AIMessage?
+11. How do you pass dynamic variables into a prompt template?
+12. What is the difference between few-shot prompting and
+    zero-shot prompting?
+13. What is an OutputParser? Why do we need it?
+14. Explain StrOutputParser and JsonOutputParser.
+15. How would you ensure an LLM returns valid structured JSON?
+16. What happens when an LLM generates an invalid JSON response?
+    How would you handle it?
+
+SECTION 3: LCEL AND RUNNABLE INTERFACE (17–23)
+
+17. What is LCEL (LangChain Expression Language)?
+18. What does the pipe operator (|) do in LCEL?
+19. What is the Runnable interface?
+20. Explain RunnableSequence and RunnableParallel.
+21. What is RunnablePassthrough? When would you use it?
+22. What is the difference between RunnableParallel and
+    parallel execution in LangGraph?
+23. How would you build an end-to-end chain using prompt,
+    model and output parser?
+
+SECTION 4: TOOLS AND FUNCTION CALLING (24–31)
+
+24. What is tool calling in LangChain?
+25. What is the @tool decorator? How does it work?
+26. Why are type hints and docstrings important when defining
+    tools?
+27. What is the difference between bind_tools() and actually
+    executing a tool?
+28. Explain AIMessage.tool_calls and ToolMessage.
+29. Why is tool_call_id important?
+30. How does the complete tool-calling cycle work internally?
+31. How would you handle tool execution failures and invalid
+    tool arguments?
+
+SECTION 5: AGENTS AND MEMORY (32–38)
+
+32. What is an AI agent? How is it different from a chain?
+33. What is create_agent() in LangChain?
+34. Explain the ReAct (Reasoning and Acting) pattern.
+35. How does an agent decide which tool to execute?
+36. What is agent state? What is the role of messages in it?
+37. What is the difference between short-term and long-term
+    memory in an AI application?
+38. How do thread_id and checkpointers help maintain
+    conversation state?
+
+SECTION 6: HANDS-ON CODING (39–45)
+
+39. Write a Python program to initialize ChatOpenAI and
+    invoke a model with a user prompt.
+40. Create a ChatPromptTemplate with dynamic input variables
+    and connect it to an LLM.
+41. Build an LCEL chain using PromptTemplate, ChatOpenAI and
+    StrOutputParser.
+42. Write a custom tool using the @tool decorator that
+    calculates the pass percentage of test cases.
+43. Implement manual tool calling using bind_tools(),
+    AIMessage and ToolMessage.
+44. Build an agent using create_agent() with two tools:
+    calculator and test_case_validator.
+45. Implement asynchronous LLM invocation using ainvoke()
+    and asyncio.
+
+SECTION 7: DEBUGGING AND REAL-WORLD SCENARIOS (46–50)
+
+46. An LLM returns different answers for the same input.
+    How would you test and evaluate its consistency?
+47. Your agent selects the wrong tool. How would you identify
+    and fix the issue?
+48. An LLM API sometimes returns 429 or 500 errors.
+    How would you implement retries and error handling?
+49. How would you test whether an agent is hallucinating
+    information?
+50. How would you design a pytest framework to test
+    LangChain applications using mocked LLM responses?
+
+
+============================================================
+PART 2: LANGGRAPH – 50 QUESTIONS
+============================================================
+
+SECTION 1: LANGGRAPH FUNDAMENTALS (1–7)
+
+51. What is LangGraph? What problems does it solve?
+52. What is the difference between LangChain and LangGraph?
+53. Explain the architecture of a LangGraph workflow.
+54. What are StateGraph, START and END?
+55. What is the purpose of TypedDict in LangGraph?
+56. What is a node? How does LangGraph execute a node?
+57. What is the difference between graph.compile() and
+    graph.invoke()?
+
+SECTION 2: NODES, EDGES AND CONDITIONAL ROUTING (58–63)
+
+58. What is the difference between nodes and edges?
+59. What is add_edge()? Explain fixed sequential execution.
+60. What is add_conditional_edges()? How does routing work?
+61. Can a routing function return multiple destinations?
+62. How do you implement a conditional workflow based on
+    the current graph state?
+63. What happens when a conditional router returns a value
+    that is not present in the routing map?
+
+SECTION 3: PARALLEL EXECUTION AND STATE REDUCERS (64–69)
+
+64. How does parallel execution work in LangGraph?
+65. What is a superstep in LangGraph?
+66. How do you create a synchronization point after
+    parallel node execution?
+67. What is a state reducer? Why is it required?
+68. What happens when parallel nodes update the same state
+    field without an appropriate reducer?
+69. Explain operator.add with Annotated and TypedDict.
+    How would you implement a custom reducer?
+
+SECTION 4: CHECKPOINTING AND PERSISTENCE (70–75)
+
+70. What is checkpointing in LangGraph?
+71. What is the role of a checkpointer?
+72. What is the difference between InMemorySaver,
+    SqliteSaver and PostgresSaver?
+73. What is thread_id? Why is it important?
+74. How does get_state_history() work?
+75. What is time travel in LangGraph? How do you replay
+    a graph from a previous checkpoint?
+
+SECTION 5: HUMAN-IN-THE-LOOP AND WORKFLOW CONTROL (76–80)
+
+76. What is Human-in-the-Loop (HITL) in LangGraph?
+77. What is interrupt()? How does it pause graph execution?
+78. How does Command(resume=...) work?
+79. What happens when a node resumes after an interrupt?
+80. How would you implement a human approval workflow
+    before executing test cases?
+
+SECTION 6: SUBGRAPHS, SEND AND MAP-REDUCE (81–85)
+
+81. What is a subgraph? Why do we use subgraphs?
+82. How do you add a compiled subgraph as a node in a
+    parent graph?
+83. Can two subgraphs have different state schemas?
+    How would you connect them?
+84. What is Send() in LangGraph? How is it different
+    from normal conditional routing?
+85. Explain the map-reduce pattern using Send() for
+    dynamically distributing 100 test cases to workers.
+
+SECTION 7: STREAMING, DEBUGGING AND ERROR HANDLING (86–90)
+
+86. What is the difference between invoke() and stream()?
+87. Explain the streaming modes: updates, values,
+    messages, custom and debug.
+88. How would you stream individual LLM tokens from
+    a LangGraph workflow?
+89. How would you debug a failed node and inspect its
+    input, output and state?
+90. Explain RetryPolicy, timeouts and fallback mechanisms.
+    How are they different?
+
+SECTION 8: HANDS-ON CODING (91–95)
+
+91. Build a LangGraph workflow with three nodes:
+    generate_test_cases, validate_test_cases and
+    execute_tests.
+92. Implement conditional routing that sends valid
+    test cases for execution and invalid cases for
+    regeneration.
+93. Create two parallel nodes to calculate pass rate
+    and failure rate, then combine their results.
+94. Implement a LangGraph workflow using InMemorySaver
+    and thread_id to preserve state across interactions.
+95. Build a workflow with interrupt() and Command(resume)
+    to get human approval before test execution.
+
+SECTION 9: REAL-WORLD AI SDET SCENARIOS (96–100)
+
+96. How would you design an AI QA Agent using LangGraph,
+    LangChain, Playwright and pytest?
+97. Your test-generation node produces duplicate test cases.
+    How would you detect and eliminate duplicates?
+98. Your graph fails because an external API is unavailable.
+    How would you implement retries, fallback and recovery?
+99. How would you test a LangGraph workflow to ensure
+    that conditional routing, parallel execution and
+    state transitions work correctly?
+100. How would you evaluate the reliability of an AI QA Agent
+     across 100 executions? What metrics would you measure?
+
+
+============================================================
+END OF QUESTION BANK – 100 QUESTIONS
+============================================================
+
+INTERVIEW PREPARATION NOTES:
+
+- Explain concepts with practical examples.
+- Write Python code wherever requested.
+- Be prepared to explain your design decisions.
+- Discuss edge cases and failure scenarios.
+- Connect answers to real-world QA automation.
+- Focus on correctness, reliability, observability,
+  maintainability and scalability.
