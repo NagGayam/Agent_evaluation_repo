@@ -1,0 +1,147 @@
+
+MCP + LANGCHAIN + LANGGRAPH — 50 INTERVIEW QUESTIONS
+====================================================
+
+SECTION 1: MCP FUNDAMENTALS (1–10)
+----------------------------------
+
+1. What is Model Context Protocol (MCP), and why was it introduced?
+
+2. What problems does MCP solve compared with traditional API integrations?
+
+3. Explain MCP architecture. What are Host, Client and Server?
+
+4. What is the difference between MCP Client and MCP Server?
+
+5. What are the three major capabilities provided by an MCP server: Tools, Resources and Prompts?
+
+6. What is the difference between MCP Tools, Resources and Prompts? Explain with practical examples.
+
+7. What is the difference between an MCP Tool and a traditional REST API endpoint?
+
+8. What is a Resource URI? Why does an MCP resource need a URI?
+
+9. What are Resource Templates? How are they different from static Resources?
+
+10. How does an MCP client discover available tools, resources and prompts from a server?
+
+
+SECTION 2: MCP PRACTICAL IMPLEMENTATION (11–20)
+-----------------------------------------------
+
+11. How do you create an MCP server using the Python MCP SDK?
+
+12. How do you expose a Python function as an MCP Tool? Explain the purpose of the @mcp.tool() decorator.
+
+13. How do you implement an MCP Resource using @mcp.resource()?
+
+14. How do you implement an MCP Resource Template that accepts dynamic parameters such as environment and run_id?
+
+15. How do you create an MCP Prompt using @mcp.prompt()? How does a client retrieve and use it?
+
+16. What is the difference between in-process communication, STDIO and Streamable HTTP transports?
+
+17. How does an MCP client connect to an MCP server using STDIO? How does it launch the server process?
+
+18. How do you connect an MCP client to a Streamable HTTP server? What is the difference between HTTP and HTTPS in this context?
+
+19. HANDS-ON: Write a Python MCP server exposing two tools: add() and multiply(). Write a client that discovers and invokes both tools.
+
+20. DEBUGGING SCENARIO: Your MCP client successfully connects to a server, but list_tools() returns an unexpected structure. You get:
+
+    AttributeError: 'tuple' object has no attribute 'name'
+
+    How would you investigate and resolve this issue? How would you inspect the response structure?
+
+
+SECTION 3: LANGCHAIN + MCP INTEGRATION (21–30)
+----------------------------------------------
+
+21. What is LangChain, and how does it complement MCP?
+
+22. Why would you integrate MCP servers with LangChain instead of directly invoking MCP tools?
+
+23. What is MCPAdapter in the LangChain MCP integration? What is its role?
+
+24. How do you connect an MCP server to LangChain using MCPAdapter? Explain the lifecycle of the connection.
+
+25. How do you retrieve MCP tools using adapter.list_tools()? What information does each returned tool contain?
+
+26. How do you invoke an MCP tool directly through a LangChain tool object using ainvoke()? How is this different from client.call_tool()?
+
+27. What is bind_tools() in LangChain? What happens when you bind MCP tools to a ChatOpenAI model?
+
+28. What is the difference between using model.bind_tools(tools) and using create_agent()? Why doesn't simply binding tools guarantee their execution?
+
+29. HANDS-ON: Write a LangChain agent using ChatOpenAI, MCPAdapter and create_agent() that discovers MCP tools and answers a user query by executing the appropriate tools.
+
+30. SCENARIO: Your LLM returns a tool call, but the tool is never executed. What could be wrong with your implementation? Explain the difference between model tool calling and an agent's tool execution loop.
+
+
+SECTION 4: LANGGRAPH + MCP INTEGRATION (31–45)
+----------------------------------------------
+
+31. What is LangGraph, and why would you use it instead of a simple LangChain agent?
+
+32. Explain the key components of LangGraph: State, Nodes, Edges, Conditional Edges, START and END.
+
+33. What is StateGraph? How do you define and compile a graph?
+
+34. What is MessagesState? Why is it useful when building conversational agents?
+
+35. What is the purpose of model.bind_tools(tools) when building a custom LangGraph agent?
+
+36. What is ToolNode in LangGraph? How does it execute MCP tools?
+
+37. What is tools_condition? How does it decide whether the graph should execute a tool or finish?
+
+38. HANDS-ON: Design a LangGraph workflow with an Agent node and a Tool node. Explain how the graph moves from Agent → Tool → Agent → END.
+
+39. What happens if the LLM responds without requesting any tool calls? How does the graph reach END?
+
+40. What is the difference between a normal edge and a conditional edge in LangGraph? Give a practical example.
+
+41. What is State Management in LangGraph? How does one node access information produced by another node?
+
+42. What is the difference between MessagesState and a custom TypedDict state? When would you use each?
+
+43. What are reducers in LangGraph? Why are they important when multiple nodes update the same state field?
+
+44. What is checkpointing in LangGraph? How does it help with persistence, resuming and maintaining conversation state?
+
+45. HANDS-ON: Design a custom LangGraph workflow for an AI QA Agent with the following nodes:
+
+    - Execute test
+    - Analyze failure
+    - Generate test report
+
+    Define the state structure, nodes, edges and expected final output.
+
+
+SECTION 5: AI SDET + MCP INTEGRATION SCENARIOS (46–50)
+------------------------------------------------------
+
+46. Imagine you are building an AI QA Agent. How would you expose Playwright test execution, test report retrieval and failure analysis as MCP tools?
+
+47. How would you test an MCP server using pytest? Explain how you would validate tool discovery, input schemas, successful responses and error scenarios.
+
+48. Suppose an MCP tool returns incorrect test execution results. How would you identify whether the issue is in the MCP server, LangChain integration, LangGraph workflow or LLM reasoning?
+
+49. How would you design an AI agent that uses multiple MCP servers, such as a test execution server and a reporting server?
+
+50. END-TO-END DESIGN QUESTION: Design an AI-powered QA Automation Agent using Python, MCP, LangChain, LangGraph, OpenAI, Playwright, pytest and Allure. Explain the complete architecture, execution flow, error handling and how you would validate the quality of the AI-generated results.
+
+
+PREPARATION PRIORITIES
+======================
+
+HIGH PRIORITY:
+- Questions 19–20: MCP practical implementation and debugging.
+- Questions 24–30: LangChain integration and agent execution.
+- Questions 33–45: LangGraph workflows and state management.
+- Questions 47–50: AI SDET architecture, testing and evaluation.
+
+GOAL:
+Be able to explain the concepts theoretically, implement the
+hands-on questions in Python, and confidently discuss the
+real-world AI QA Agent architecture.
