@@ -1,0 +1,10 @@
+mcp[cli]>=2,<3
+langchain
+langgraph
+datasets
+chromadb>=1.0,<2
+openai>=1.0,<3
+tiktoken
+python-dotenv
+requests>=2.31,<3
+langfuse

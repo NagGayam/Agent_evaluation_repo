@@ -1,0 +1,1656 @@
+{
+    "dataset":  "agenticclass/fabric",
+    "split":  "train",
+    "selection_version":  1,
+    "review_date":  "2026-11-10",
+    "provenance_report":  "reports/fabric_candidates.md",
+    "provenance_report_sha256":  "facafafb16aa7c107f325606f0a751b65696136b56513f90e231b7ab9b0f4e02",
+    "dataset_revision":  "not_recorded_in_source_report",
+    "selection_status":  "content_selected_for_demo_not_financially_verified",
+    "method":  "Explicit content review and ID-based exclusions; no random sampling",
+    "quotas":  {
+                   "income_tax":  20,
+                   "banking_rbi":  18,
+                   "mutual_funds":  18,
+                   "stock_market":  17,
+                   "insurance":  14,
+                   "retirement":  14,
+                   "sebi_regulations":  12,
+                   "financial_literacy":  4,
+                   "employment_benefits":  3
+               },
+    "decisions":  [
+                      {
+                          "id":  "tax_001",
+                          "category":  "income_tax",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain section_80c coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_002",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain old_vs_new_regime coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_003",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain ltcg coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_004",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain stcg coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_005",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain hra coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_006",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain section_80d coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_007",
+                          "category":  "income_tax",
+                          "difficulty":  "easy",
+                          "decision":  "excluded",
+                          "reason":  "Filing and penalty answer is not tied to a clear assessment year and mixes multiple deadline thresholds; defer rather than use as a clean reference.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_008",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nri_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_009",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain new_regime_deductions coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_010",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain crypto_tax coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_011",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain gift_tax coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_012",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Complex assertion about agricultural-income integration across tax regimes needs primary-source validation; defer from the small demo.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_013",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain advance_tax coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_014",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain section_80e coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_015",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain section_80g coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_016",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Answer introduces a per-property interest cap without resolving aggregate limits or tax-regime conditions; defer this ambiguous reference.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_017",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain capital_loss_setoff coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_018",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Cross-border treaty, residency and Form 67 timing conditions add specialist complexity; defer to a later verified subset.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_019",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain presumptive_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_020",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain senior_citizen_benefits coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_021",
+                          "category":  "income_tax",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain income_other_sources coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_022",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain section_54 coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_023",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain tcs_lrs coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_024",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain esop_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "tax_025",
+                          "category":  "income_tax",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Internal arithmetic failure: listed slab components sum to Rs 12,30,000, not the stated Rs 16,30,000. Downstream surcharge and cess use the inconsistent total.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_001",
+                          "category":  "banking_rbi",
+                          "difficulty":  "easy",
+                          "decision":  "excluded",
+                          "reason":  "Question asks for current repo rate and EMI impact; a static dated rate snapshot and generic EMI estimate cannot reliably answer that moving target.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_002",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain fd_rules coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_003",
+                          "category":  "banking_rbi",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain upi_limits coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_004",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain deposit_insurance coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_005",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain loan_prepayment coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_006",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nbfc_vs_bank coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_007",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain gold_loan coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_008",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain digital_lending coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_009",
+                          "category":  "banking_rbi",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain rtgs_neft_imps coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_010",
+                          "category":  "banking_rbi",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain priority_sector coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_011",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain mclr_vs_eblr coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_012",
+                          "category":  "banking_rbi",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Answer mixes Rs 7 lakh and Rs 10 lakh thresholds in the same explanation. LRS/TCS coverage remains in tax_023, whose claims still require verification.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_013",
+                          "category":  "banking_rbi",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain sarfaesi_act coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_014",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain banking_ombudsman coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_015",
+                          "category":  "banking_rbi",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain dormant_account coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_016",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain education_loan coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_017",
+                          "category":  "banking_rbi",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain credit_score_cibil coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_018",
+                          "category":  "banking_rbi",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain recurring_deposit coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_019",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain cash_transaction_limits coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "bank_020",
+                          "category":  "banking_rbi",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain card_tokenization coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_001",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain elss_lock_in_and_tax coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_002",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain sip_vs_lumpsum_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_003",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain exit_load_rules coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_004",
+                          "category":  "mutual_funds",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain direct_vs_regular_plan coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_005",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Internally inconsistent indexation explanation: says grandfathered units retain indexation, then says indexation was removed, then offers an election. Defer pending correction and verification.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_006",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain switching_tax_implications coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_007",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Answer first states there is no TDS on resident equity SWP, then adds a conflicting TDS exception. Defer this internally inconsistent reference.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_008",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain idcw_vs_growth coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_009",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nomination_rules coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_010",
+                          "category":  "mutual_funds",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nfo_investor_awareness coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_011",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain index_fund_vs_active_expense_ratio coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_012",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain gilt_funds_interest_rate_risk coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_013",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain international_fund_taxation_post_2023 coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_014",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain fund_of_funds_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_015",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain side_pocketing_sebi_rules coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_016",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain liquid_fund_vs_savings_account coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_017",
+                          "category":  "mutual_funds",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain target_maturity_funds coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_018",
+                          "category":  "mutual_funds",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain multicap_vs_flexicap_sebi_rules coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_019",
+                          "category":  "mutual_funds",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain overnight_fund_safety coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "mf_020",
+                          "category":  "mutual_funds",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain kyc_ckyc_requirements coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_001",
+                          "category":  "stock_market",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain settlement_cycle coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_002",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain circuit_breakers coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_003",
+                          "category":  "stock_market",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain demat_account coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_004",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain stt coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_005",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain intraday_vs_delivery_tax coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_006",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "F\u0026O reform coverage overlaps sebi_006; also includes changing index lot-size snapshots. Keep the margin-focused record rather than both.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_007",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain corporate_actions_tax coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_008",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Combines off-market gifts, fair-value rules and subsequent-sale STT eligibility into broad conclusions; too many unresolved conditions for this small reference set.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_009",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain pledge_unpledge_margin coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_010",
+                          "category":  "stock_market",
+                          "difficulty":  "medium",
+                          "decision":  "excluded",
+                          "reason":  "Weekly-expiry coverage overlaps sebi_006 and includes changing weekday schedules and later algo requirements; omit the duplicate moving-target record.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_011",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain rights_issue coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_012",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain dividend_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_013",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain share_buyback_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_014",
+                          "category":  "stock_market",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain individual_stock_circuit_limits coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_015",
+                          "category":  "stock_market",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain block_deal_bulk_deal coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_016",
+                          "category":  "stock_market",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain asba_ipo coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_017",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain stock_lending_borrowing coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_018",
+                          "category":  "stock_market",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain multi_asset_allocation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_019",
+                          "category":  "stock_market",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain listing_gains_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "stock_020",
+                          "category":  "stock_market",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain trading_holidays_market_timing coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_001",
+                          "category":  "insurance",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain term_vs_endowment coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_002",
+                          "category":  "insurance",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain tax_benefits_80c_10_10d coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_003",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain health_insurance_portability coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_004",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain pre_existing_disease_waiting coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_005",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain claim_settlement_ratio coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_006",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain irdai_standard_products coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_007",
+                          "category":  "insurance",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain group_vs_individual coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_008",
+                          "category":  "insurance",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain motor_insurance coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_009",
+                          "category":  "insurance",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain ulip_charges_lockin coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_010",
+                          "category":  "insurance",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nomination_vs_will coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_011",
+                          "category":  "insurance",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain cashless_vs_reimbursement coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_012",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain copay_sublimits coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_013",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain critical_illness_rider_vs_standalone coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_014",
+                          "category":  "insurance",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain irdai_use_and_file coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ins_015",
+                          "category":  "insurance",
+                          "difficulty":  "medium",
+                          "decision":  "excluded",
+                          "reason":  "Health-claim answer invokes Section 45 and mixes several waiting-period timelines without clearly separating insurance types; defer pending specialist verification.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_001",
+                          "category":  "retirement",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain epf_contribution coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_002",
+                          "category":  "retirement",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain ppf coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_003",
+                          "category":  "retirement",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nps_tax_benefits coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_004",
+                          "category":  "retirement",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain gratuity coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_005",
+                          "category":  "retirement",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain eps_pension coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_006",
+                          "category":  "retirement",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain epf_withdrawal coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_007",
+                          "category":  "retirement",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain ppf_extension coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_008",
+                          "category":  "retirement",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain nps_annuity coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_009",
+                          "category":  "retirement",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain vpf coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_010",
+                          "category":  "retirement",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain superannuation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_011",
+                          "category":  "retirement",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain epfo_online_claims coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_012",
+                          "category":  "retirement",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain atal_pension_yojana coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_013",
+                          "category":  "retirement",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain scss coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_014",
+                          "category":  "retirement",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain pmvvy coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ret_015",
+                          "category":  "retirement",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Direct-annuity section separates return of capital from income, then the later summary says India taxes annuity income unlike countries that separate capital. The unresolved distinction weakens the reference.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_001",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain insider_trading coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_002",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Question requests a maximum blended TER, but answer provides only an approximation and incomplete slab workings; expense-ratio concepts remain covered in mf_011.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_003",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain ipo_allotment coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_004",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Near-duplicate of market-wide circuit-breaker coverage in stock_002; retain one reference to reduce retrieval redundancy.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_005",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain finfluencer_regulations coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_006",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain fo_margin_requirements coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_007",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain delisting_regulations coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_008",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain scores_platform coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_009",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain buyback_regulations coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_010",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain reit_invit_regulations coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_011",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain new_asset_class coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_012",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain investor_protection_fund coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_013",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain algo_trading_retail coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_014",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "excluded",
+                          "reason":  "SME IPO eligibility and market-making mechanics are relatively niche and multi-condition; prioritize everyday investor topics for the initial demo.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "sebi_015",
+                          "category":  "sebi_regulations",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain dispute_resolution coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_017",
+                          "category":  "financial_literacy",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain leverage_investing coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_018",
+                          "category":  "financial_literacy",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain mis_selling coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_019",
+                          "category":  "financial_literacy",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain short_term_parking coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_020",
+                          "category":  "financial_literacy",
+                          "difficulty":  "easy",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain debt_repayment coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_013",
+                          "category":  "employment_benefits",
+                          "difficulty":  "hard",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain vrs_taxation coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_014",
+                          "category":  "employment_benefits",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain leave_encashment coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_015",
+                          "category":  "employment_benefits",
+                          "difficulty":  "hard",
+                          "decision":  "excluded",
+                          "reason":  "Internal contradiction: opening says the entire Rs 18 lakh is tax-free, but the calculation later says only about Rs 7.6 lakh is exempt. General gratuity coverage remains in ret_004.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_016",
+                          "category":  "employment_benefits",
+                          "difficulty":  "medium",
+                          "decision":  "selected_for_demo",
+                          "reason":  "Retain relocation_allowance coverage within the personal-finance demo; nonblank English question, answer and reference. Content selection only, not financial approval.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_009",
+                          "category":  "ai_customer_service",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_010",
+                          "category":  "ai_customer_service",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_005",
+                          "category":  "aml_kyc",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_006",
+                          "category":  "aml_kyc",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_001",
+                          "category":  "fraud_detection",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_002",
+                          "category":  "fraud_detection",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_009",
+                          "category":  "gst_small_business",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_010",
+                          "category":  "gst_small_business",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_011",
+                          "category":  "gst_small_business",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_012",
+                          "category":  "gst_small_business",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_001",
+                          "category":  "guardrails",
+                          "difficulty":  "easy",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_002",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_003",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_004",
+                          "category":  "guardrails",
+                          "difficulty":  "easy",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_005",
+                          "category":  "guardrails",
+                          "difficulty":  "easy",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_006",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_007",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_008",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_009",
+                          "category":  "guardrails",
+                          "difficulty":  "easy",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_010",
+                          "category":  "guardrails",
+                          "difficulty":  "hard",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_011",
+                          "category":  "guardrails",
+                          "difficulty":  "easy",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_012",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_013",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_014",
+                          "category":  "guardrails",
+                          "difficulty":  "easy",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "guard_015",
+                          "category":  "guardrails",
+                          "difficulty":  "medium",
+                          "decision":  "safety_pool",
+                          "reason":  "Reserve for safety evaluation; not part of retrieval KB. Review expected responses before use.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_005",
+                          "category":  "huf_partnership_trust",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_006",
+                          "category":  "huf_partnership_trust",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_007",
+                          "category":  "huf_partnership_trust",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_008",
+                          "category":  "huf_partnership_trust",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_003",
+                          "category":  "loan_underwriting",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_004",
+                          "category":  "loan_underwriting",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_003",
+                          "category":  "recent_changes",
+                          "difficulty":  "easy",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_007",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_009",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_010",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_011",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_012",
+                          "category":  "recent_changes",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_013",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_014",
+                          "category":  "recent_changes",
+                          "difficulty":  "easy",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_015",
+                          "category":  "recent_changes",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_016",
+                          "category":  "recent_changes",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_017",
+                          "category":  "recent_changes",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_018",
+                          "category":  "recent_changes",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_019",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "recent_020",
+                          "category":  "recent_changes",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_007",
+                          "category":  "regulatory_reporting",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "ent_008",
+                          "category":  "regulatory_reporting",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_001",
+                          "category":  "rera_real_estate",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_002",
+                          "category":  "rera_real_estate",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_003",
+                          "category":  "rera_real_estate",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "adv_004",
+                          "category":  "rera_real_estate",
+                          "difficulty":  "medium",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_001",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_002",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_003",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_004",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_005",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_006",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_007",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_008",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_009",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_010",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_011",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_012",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_013",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_014",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      },
+                      {
+                          "id":  "scen_015",
+                          "category":  "scenario",
+                          "difficulty":  "hard",
+                          "decision":  "outside_scope",
+                          "reason":  "Outside the initial nine categories; retained in the original report for later review.",
+                          "financial_verification":  "not_independently_verified"
+                      }
+                  ]
+}

@@ -1,0 +1,142 @@
+========================================================
+LANGFUSE INTERVIEW QUESTIONS
+Target Role: AI SDET / AI Quality Engineer
+========================================================
+
+SECTION 1: LANGFUSE FUNDAMENTALS
+
+1. What is Langfuse, and why is it used in LLM applications?
+
+2. What are the major features provided by Langfuse?
+
+3. What is LLM observability, and why is it important?
+
+4. What is the difference between traditional application
+   monitoring and LLM observability?
+
+5. Explain the concepts of Trace, Observation, Span,
+   and Generation in Langfuse.
+
+6. What is the difference between a Trace and a Span?
+
+7. What is the difference between a Span and a Generation?
+
+8. What information can we capture using Langfuse traces?
+
+9. How does Langfuse help debug LLM application failures?
+
+10. How would you integrate Langfuse into an existing
+    Python-based LLM application?
+
+
+SECTION 2: LANGFUSE SDK AND INTEGRATION
+
+11. How do you initialize the Langfuse Python SDK?
+
+12. What is the purpose of get_client()?
+
+13. What is start_as_current_observation()?
+
+14. What is the difference between manually creating
+    observations and using LangChain callbacks?
+
+15. How do you integrate Langfuse with LangChain?
+
+16. How do you integrate Langfuse with LangGraph?
+
+17. How can you trace a multi-step LLM workflow?
+
+18. How do you capture input and output information
+    for an LLM execution?
+
+19. What is the purpose of langfuse.flush()?
+
+20. How would you instrument an MCP server and capture
+    individual MCP tool executions in Langfuse?
+
+
+SECTION 3: LLM OBSERVABILITY AND MONITORING
+
+21. How can Langfuse help monitor LLM response latency?
+
+22. How do you monitor input and output token usage?
+
+23. How is LLM API cost tracked in Langfuse?
+
+24. How would you identify expensive LLM operations?
+
+25. How can you identify slow steps in a multi-step
+    LangChain or LangGraph workflow?
+
+26. How do you capture exceptions and failed executions?
+
+27. What is the purpose of observation levels and
+    status messages?
+
+28. How would you debug an LLM application that
+    occasionally produces incorrect responses?
+
+29. How can Langfuse help identify production regressions?
+
+30. How would you monitor an LLM application
+    running across multiple services?
+
+
+SECTION 4: SCORES AND LLM EVALUATION
+
+31. What are scores in Langfuse?
+
+32. What is the difference between numeric,
+    categorical, and boolean scores?
+
+33. What is LLM-as-a-Judge?
+
+34. How would you implement an LLM-as-a-Judge
+    using GPT-4.1-mini?
+
+35. How would you evaluate faithfulness in a RAG system?
+
+36. What is the difference between faithfulness
+    and answer relevancy?
+
+37. How can you evaluate multiple LLM responses
+    automatically?
+
+38. What are the limitations of using an LLM
+    to evaluate another LLM?
+
+39. How would you validate the reliability of
+    an LLM evaluator?
+
+40. How would you prevent an evaluator from
+    assigning high scores to hallucinated answers?
+
+
+SECTION 5: DATASETS AND EXPERIMENTS
+
+41. What are datasets in Langfuse?
+
+42. What is a dataset item?
+
+43. What are dataset experiments?
+
+44. How do you execute an entire dataset using
+    the Langfuse Python SDK?
+
+45. How do you attach evaluation scores to
+    individual dataset experiment results?
+
+46. How would you compare two different RAG
+    application versions using Langfuse?
+
+47. How can you identify performance regressions
+    between two evaluation experiments?
+
+48. How would you design a golden dataset
+    for evaluating a RAG application?
+
+49. How would you integrate Langfuse experiments
+    into a CI/CD pipeline?
+
+50. Design an end-to-end LLM evaluation and
+    observability framework using Langfuse.
