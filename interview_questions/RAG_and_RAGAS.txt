@@ -1,0 +1,82 @@
+Buddy, here are **30 interview practice questions on RAG and RAGAS**, tailored to your **Python automation and AI SDET background**. They cover concepts, metrics, debugging, and automation.
+
+Practise answering each with **an explanation, an example, and how you would test it**.
+
+### RAG fundamentals
+
+1. **Explain a RAG pipeline end to end.**  
+   Cover ingestion, chunking, embeddings, indexing, retrieval, and response generation.
+
+2. **Why use RAG instead of asking an LLM directly? When would you consider fine-tuning?**
+
+3. **What are embeddings, and how does a vector database use them to retrieve relevant information?**
+
+4. **How do chunk size and chunk overlap affect retrieval quality? How would you test different configurations?**
+
+5. **What is the difference between keyword search, vector search, and hybrid search?**
+
+6. **What is a reranker, and how would you verify that adding one improves retrieval?**
+
+7. **How does `top_k` affect answer quality, noise, latency, and cost?**
+
+8. **What can cause hallucination in a RAG application even when the correct documents are available?**
+
+### RAG testing and debugging
+
+9. **How would you design a test strategy for a RAG application?**  
+   Separate ingestion, retrieval, generation, and end-to-end checks.
+
+10. **How would you create a reliable evaluation dataset?**  
+    Discuss questions, reference answers, source evidence, edge cases, and human review.
+
+11. **How would you test PDF ingestion containing tables, scanned pages, headings, and special characters?**
+
+12. **How would you test document updates and deletions?**  
+    Check that new information becomes retrievable and stale information stops appearing.
+
+13. **The chatbot gives a wrong answer. How would you determine whether retrieval or generation caused it?**
+
+14. **How would you test questions whose answers are missing from the knowledge base?**
+
+15. **How would you test conflicting documents, outdated information, and questions requiring evidence from multiple documents?**
+
+16. **How would you test document-level access controls and prompt injection hidden inside retrieved documents?**
+
+### RAGAS metrics
+
+17. **What is RAGAS, and what are the limitations of automated LLM-based evaluation?**
+
+18. **Explain Context Precision and calculate it for the relevance order `[0, 1, 1]`.**  
+    Explain why ranking matters and why this is not simply `2/3`.
+
+19. **Explain LLM-based Context Recall. Does it count retrieved chunks or supported reference claims?**
+
+20. **Explain Faithfulness. How is it different from Context Recall?**  
+    Identify whose claims each metric checks.
+
+21. **How does Answer Relevancy use generated questions and embeddings? Why doesn’t it require a reference answer?**
+
+22. **How does Answer Correctness combine factual agreement and semantic similarity? What are TP, FP, and FN?**
+
+23. **What inputs and evaluator dependencies are required for each of the five metrics?**  
+    Distinguish the question, response, reference, retrieved contexts, LLM, and embeddings.
+
+24. **Can Context Precision be high while Context Recall is low? Give an example.**
+
+25. **Can an answer be faithful but incorrect, or relevant but unfaithful? Give examples of both.**
+
+### AI SDET automation and practical scenarios
+
+26. **How would you build a Python/Pytest framework that runs RAGAS evaluations over a dataset?**  
+    Discuss fixtures, configuration, parametrization, API clients, and reporting.
+
+27. **How would you set pass/fail thresholds for these metrics? Would you use the same threshold for every metric and question type?**
+
+28. **How would you handle evaluator variability, timeouts, rate limits, retries, caching, and evaluation cost?**
+
+29. **How would you compare two RAG versions before a release?**  
+    Discuss using the same dataset, controlling configuration, inspecting per-question regressions, and checking latency and cost.
+
+30. **Your evaluation reports high Context Recall and Answer Relevancy, but low Faithfulness and Answer Correctness. How would you investigate and verify a fix?**
+
+For scenario questions, structure your answer as: **possible cause → evidence to inspect → test to isolate it → fix → regression check**. This will help you demonstrate AI SDET judgment alongside your knowledge of the metrics.
