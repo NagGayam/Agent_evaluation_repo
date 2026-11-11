@@ -1,7 +1,7 @@
 """Search the existing FABRIC collection; no ingestion or answer generation.
 
-    python retrieval.py "How much of my bank deposit is insured?"
-    python retrieval.py "What is an ELSS lock-in?" --top-k 5 --json
+    python -m agent.retrieval "How much of my bank deposit is insured?"
+    python -m agent.retrieval "What is an ELSS lock-in?" --top-k 5 --json
 
 Each query makes one OpenAI embedding request. Ranked matches are returned
 without a relevance cutoff; distance is not a confidence or correctness score.
@@ -17,7 +17,7 @@ from chromadb.errors import NotFoundError
 from openai import OpenAI
 import tiktoken
 
-from settings import MODEL, DIMENSIONS, MAX_INPUT_TOKENS, chroma_path, chroma_collection
+from agent.settings import MODEL, DIMENSIONS, MAX_INPUT_TOKENS, chroma_path, chroma_collection
 
 
 def open_collection(db_path=None, collection_name=None):
@@ -25,12 +25,12 @@ def open_collection(db_path=None, collection_name=None):
     path = Path(db_path).expanduser().resolve() if db_path is not None else chroma_path()
     name = collection_name if collection_name is not None else chroma_collection()
     if not (path / "chroma.sqlite3").is_file():
-        raise ValueError(f"No local Chroma database at {path}. Check .env or run ingestion.py.")
+        raise ValueError(f"No local Chroma database at {path}. Check .env or run python -m ingestion.ingest.")
     client = chromadb.PersistentClient(path=str(path))
     try:
         collection = client.get_collection(name=name, embedding_function=None)
     except NotFoundError as exc:
-        raise ValueError(f"Collection {name!r} was not found. Check .env or run ingestion.py.") from exc
+        raise ValueError(f"Collection {name!r} was not found. Check .env or run python -m ingestion.ingest.") from exc
     expected = {
         "embedding_model": MODEL,
         "embedding_dimensions": DIMENSIONS,
@@ -41,7 +41,7 @@ def open_collection(db_path=None, collection_name=None):
         if (collection.metadata or {}).get(key) != value:
             raise ValueError(f"Collection setting {key!r} does not match ingestion settings.")
     if collection.count() == 0:
-        raise ValueError("Collection is empty. Run ingestion.py first.")
+        raise ValueError("Collection is empty. Run python -m ingestion.ingest first.")
     return collection
 
 

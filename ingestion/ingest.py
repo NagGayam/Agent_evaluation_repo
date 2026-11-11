@@ -1,10 +1,10 @@
 """Ingest the selected FABRIC English Q&A into local Chroma.
 
 Review without embedding calls or Chroma writes:
-    python ingestion.py --dry-run
+    python -m ingestion.ingest --dry-run
 
 Ingest (requires OPENAI_API_KEY in the environment or project .env):
-    python ingestion.py
+    python -m ingestion.ingest
 
 One complete Q&A becomes one document. Oversized records cause validation to
 fail before ingestion, rather than silently truncating or splitting answers.
@@ -20,7 +20,7 @@ from pathlib import Path
 
 import tiktoken
 
-from settings import (
+from agent.settings import (
     ROOT, MODEL, DIMENSIONS, MAX_INPUT_TOKENS, chroma_path, chroma_collection,
 )
 

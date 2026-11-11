@@ -6,6 +6,8 @@ import re
 
 from datasets import load_dataset
 
+ROOT = Path(__file__).resolve().parents[1]
+
 QUOTAS = {
     "income_tax": 20, "banking_rbi": 18, "mutual_funds": 18,
     "stock_market": 16, "insurance": 14, "retirement": 14,
@@ -91,7 +93,7 @@ def build_report(records):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--report", type=Path, default=Path("reports/fabric_candidates.md"))
+    parser.add_argument("--report", type=Path, default=ROOT / "reports/fabric_candidates.md")
     parser.add_argument("--overwrite", action="store_true", help="Replace report, including any manual review notes.")
     args = parser.parse_args()
     if args.report.exists() and not args.overwrite:

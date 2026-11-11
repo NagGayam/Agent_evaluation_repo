@@ -2,9 +2,9 @@
 
 from mcp.server import MCPServer
 
-from retrieval import retrieve
-from get_exchange_rate import get_exchange_rate as fetch_exchange_rate
-from financial_tools import (
+from agent.retrieval import retrieve
+from agent.tools.exchange_rates import get_exchange_rate as fetch_exchange_rate
+from agent.tools.financial_tools import (
     calculate_emi as compute_emi,
     convert_currency as compute_conversion,
 )
