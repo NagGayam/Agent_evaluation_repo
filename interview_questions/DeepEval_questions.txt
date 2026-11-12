@@ -1,0 +1,53 @@
+DeepEval Interview Questions for AI SDET / AI Quality Engineer
+==============================================================
+
+SECTION 1: DeepEval Fundamentals
+
+1. What is DeepEval, and why do we need it for testing LLM applications?
+
+2. What is LLM-as-a-judge, and how does DeepEval implement it?
+
+3. What is LLMTestCase in DeepEval, and what are its important parameters?
+
+4. How do you integrate DeepEval with Python and Pytest for automated LLM evaluation?
+
+
+SECTION 2: Tool Correctness Metric
+
+5. What is the Tool Correctness metric, and how does it work internally?
+
+6. How does DeepEval calculate Tool Correctness scores? What happens when an agent calls unexpected or missing tools?
+
+7. How would you validate tool arguments, tool outputs, and execution order using Tool Correctness?
+
+8. What is the difference between should_exact_match=True and strict_mode=True in Tool Correctness?
+
+9. If an agent calls the correct tools with correct arguments but generates an incorrect final response, will Tool Correctness detect the issue? Why or why not?
+
+
+SECTION 3: Task Completion Metric
+
+10. What is the Task Completion metric, and how is it different from Tool Correctness?
+
+11. How does Task Completion work internally? Is it deterministic or LLM-based?
+
+12. Why does DeepEval use execution traces for Task Completion, and what is the purpose of the @observe() decorator?
+
+13. How would you evaluate Task Completion if you had access to Langfuse traces but not the agent's source code?
+
+14. Can Task Completion be evaluated without an expected_output? How does the metric determine whether the agent succeeded?
+
+15. An agent completes a task successfully but makes unnecessary tool calls. How would you evaluate this scenario?
+
+
+SECTION 4: G-Eval Metric
+
+16. What is G-Eval, and how is it different from making a custom LLM-as-a-judge API call using the OpenAI SDK?
+
+17. What is the difference between criteria and evaluation_steps in G-Eval?
+
+18. How does G-Eval calculate its score? What is probability-weighted scoring?
+
+19. What are evaluation_params in G-Eval, and when should you include expected_output?
+
+20. How would you reduce hallucinations, judge bias, and inconsistent evaluation scores when using G-Eval for automated regression testing?
