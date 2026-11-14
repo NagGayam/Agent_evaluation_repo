@@ -10,6 +10,7 @@ server. Each case executes the agent once, then both metrics score that executio
 import argparse
 from datetime import datetime, timezone
 from importlib.metadata import version
+from pathlib import Path
 import json
 import math
 import sys
@@ -20,6 +21,7 @@ from deepeval.test_case import ToolCall
 from langfuse import Evaluation, get_client
 
 from evaluations.deepeval.evaluation import tool_correct_ness, task_completeness
+from evaluations.local_results import git_revision, save_results
 
 
 DATASET_NAME = "DeepEval_Data_set"
@@ -166,6 +168,8 @@ def summarize(item_results, scheduled_count):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--limit", type=int, choices=range(1, 11), default=1, metavar="1-10")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "results" / "deepeval",
+                        help="Directory for local JSON results (default: results/deepeval)")
     args = parser.parse_args()
     try:
         dataset = langfuse.get_dataset(DATASET_NAME)
@@ -175,6 +179,8 @@ def main():
         for item in items:
             validate_item(item)
         run_name = "deepeval-agent-v1-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        started_at = datetime.now(timezone.utc).isoformat()
+        revision = git_revision()
         result = langfuse.run_experiment(
             name="DeepEval agent baseline", run_name=run_name, data=items,
             description="Tool correctness and task-completeness G-Eval; draft test cases",
@@ -185,6 +191,12 @@ def main():
                       "item_count": str(len(items)), "fixture_support": "exchange-rate-only-v1"},
         )
         print(f"Langfuse experiment: {result.experiment_url}")
+        saved_path = save_results(
+            result, items, started_at=started_at, revision=revision,
+            thresholds=THRESHOLDS, threshold_version=THRESHOLD_VERSION,
+            dataset_name=DATASET_NAME, output_dir=args.output_dir,
+        )
+        print(f"Local results: {saved_path}")
         return result
     finally:
         langfuse.flush()

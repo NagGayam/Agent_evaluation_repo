@@ -174,6 +174,8 @@ The [DeepEval dataset](evaluations/datasets/DeepEval_Data_set.jsonl) contains 10
 
 The [runner](evaluations/deepeval/run_experiment.py) calls the agent once per item and reuses the output for both metrics. Controlled exchange-rate fixtures make selected scenarios repeatable, including failures. Numeric expectation fields exist in some items; the runner does not currently enforce them through a separate numeric assertion.
 
+Completed DeepEval runs also save portable JSON to `results/deepeval/<run-name>.json`, including configuration, actual execution evidence, metric decisions/reasons, and summary pass rates. See [local results](results/README.md). Saving reuses existing results and makes no additional model requests.
+
 ### Promptfoo: test behavior under adversarial pressure
 
 [promptfooconfig.yaml](evaluations/promptfoo/promptfooconfig.yaml) defines one benign control and five manual adversarial cases:
