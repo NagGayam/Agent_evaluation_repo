@@ -12,3 +12,4 @@ langfuse
 ragas==0.4.3
 # RAGAS 0.4.3 imports the legacy Vertex AI module removed in community 0.4.2.
 langchain-community==0.4.1
+deepeval==4.3.4

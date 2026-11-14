@@ -80,11 +80,11 @@ def extract_retrieved_records(messages: list, search_tool_names: set[str]) -> li
     return records
 
 
-async def run_agent(query: str) -> dict:
+async def run_agent(query: str, *, server_config=None) -> dict:
     if not isinstance(query, str) or not query.strip():
         raise ValueError("query must be a nonblank string")
     model = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
-    async with MCPAdapter(server) as client:
+    async with MCPAdapter(server if server_config is None else server_config) as client:
         tools = await client.list_tools()
         search_tool_names = {
             tool.name for tool in tools
@@ -118,6 +118,12 @@ async def run_agent(query: str) -> dict:
                 for message in response["messages"]
                 if isinstance(message, ToolMessage) and message.status == "error"
             ]
+            tool_results = [
+                {"tool_call_id": message.tool_call_id, "name": message.name,
+                 "status": message.status, "content": message.content,
+                 "artifact": message.artifact}
+                for message in response["messages"] if isinstance(message, ToolMessage)
+            ]
             span.update(output=final_answer)
             return {
                 "response": final_answer,
@@ -126,6 +132,7 @@ async def run_agent(query: str) -> dict:
                 "trace_id": span.trace_id,
                 "tool_calls": tool_calls,
                 "tool_errors": tool_errors,
+                "tool_results": tool_results,
             }
 
 
