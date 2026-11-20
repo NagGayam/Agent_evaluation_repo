@@ -1,0 +1,144 @@
+MACHINE LEARNING INTERVIEW QUESTIONS FOR AI SDET
+Experience Level: 2–4 Years
+Total Questions: 50
+
+==================================================
+SECTION 1: MACHINE LEARNING FUNDAMENTALS (1–10)
+==================================================
+
+1. What is Machine Learning, and how does it differ from traditional programming?
+
+2. What is the difference between AI, ML, Deep Learning, and Generative AI?
+
+3. What are supervised, unsupervised, and reinforcement learning? Give examples.
+
+4. What is the difference between classification and regression?
+
+5. What are features, labels, and predictions in Machine Learning?
+
+6. What is the difference between training, validation, and testing datasets?
+
+7. What is model training, and how is it different from model inference?
+
+8. What are overfitting and underfitting? How can you identify them?
+
+9. What is data leakage, and why is it dangerous?
+
+10. What is the difference between a model parameter and a hyperparameter?
+
+
+==================================================
+SECTION 2: ML EVALUATION METRICS (11–20)
+==================================================
+
+11. What is a confusion matrix? Explain TP, TN, FP, and FN.
+
+12. What is accuracy, and when can it be misleading?
+
+13. What is precision, and when should you prioritize it?
+
+14. What is recall, and when should you prioritize it?
+
+15. What is F1-score, and why is it useful for imbalanced datasets?
+
+16. What is the difference between precision and recall? Explain with an example.
+
+17. How would you choose the right evaluation metric for a classification model?
+
+18. What is class imbalance, and how does it affect model evaluation?
+
+19. What are MAE, MSE, and RMSE in regression model evaluation?
+
+20. What is a classification threshold, and how does changing it affect precision and recall?
+
+
+==================================================
+SECTION 3: MACHINE LEARNING ALGORITHMS (21–28)
+==================================================
+
+21. What is Linear Regression, and where is it used?
+
+22. What is Logistic Regression, and why is it used for classification?
+
+23. What is the difference between Linear Regression and Logistic Regression?
+
+24. How does a Decision Tree make predictions?
+
+25. What is Random Forest, and how does it differ from a Decision Tree?
+
+26. Why can Random Forest reduce overfitting compared with a single Decision Tree?
+
+27. What is K-Means Clustering, and how does it work?
+
+28. What is the difference between supervised classification and unsupervised clustering?
+
+
+==================================================
+SECTION 4: NEURAL NETWORKS, NLP & LLMS (29–38)
+==================================================
+
+29. What is an artificial neural network? Explain input, hidden, and output layers.
+
+30. What are weights and biases in neural networks?
+
+31. What is an activation function, and why is it needed?
+
+32. What are forward propagation and backpropagation?
+
+33. What is a loss function, and how does a neural network minimize loss?
+
+34. What is gradient descent, and what is the role of the learning rate?
+
+35. What is tokenization, and what is a token?
+
+36. What are embeddings, and how are token IDs converted into embedding vectors?
+
+37. What is a Transformer, and what is the role of self-attention?
+
+38. What is the difference between training and inference in an LLM?
+    Are weights updated during inference?
+
+
+==================================================
+SECTION 5: PRACTICAL ML TESTING - AI SDET (39–50)
+==================================================
+
+39. How would you test a Machine Learning classification model?
+
+40. How would you validate the quality of a regression model?
+
+41. How do you test an ML model when the exact expected output is not always known?
+
+42. What is the difference between testing traditional software and testing ML-based software?
+
+43. How would you identify overfitting while validating an ML model?
+
+44. How would you detect data leakage in an ML pipeline?
+
+45. How would you test an ML model with highly imbalanced data?
+
+46. How would you validate model behaviour for missing values, null inputs, and outliers?
+
+47. What is data drift, and how would you detect it in production?
+
+48. What is concept drift, and how does it differ from data drift?
+
+49. How would you automate ML model evaluation using Python and Pytest?
+
+50. A defect prediction model has 98% accuracy but misses 70% of actual defects.
+    Would you approve its release? Explain your evaluation strategy.
+
+
+==================================================
+PREPARATION PRIORITY
+==================================================
+
+Priority 1: ML Fundamentals (Q1–10)
+Priority 2: Evaluation Metrics (Q11–20)
+Priority 3: Practical ML Testing (Q39–50)
+Priority 4: Neural Networks and LLMs (Q29–38)
+Priority 5: ML Algorithms (Q21–28)
+
+GOAL:
+Be able to explain each concept in 30–60 seconds,
+with a simple example and an AI SDET testing perspective.
