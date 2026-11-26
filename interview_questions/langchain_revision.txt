@@ -1,0 +1,264 @@
+1. What is LangChain? What problems does it solve?
+- LangChain is a open source framework that can be used build llm powered applications 
+- LangChain will provide us reusable prompts which accepts dynamic variables 
+- LangChain will provide  us common configuration for making an llm call 
+- LangChain will helps us in creating agent with out us worrying about agentic loop maintainance
+- LangChain will helps us in connecting multiple wokflows throuhg chains 
+- LangChain also suports with statemangement
+********************************************************
+2.What is the difference between LangChain and directly calling the OpenAI API?
+- OpenAI API allows you to interact directly with OpenAI models, whereas LangChain provides a framework to build applications around LLMs.
+ - LangChain provides us resuable prompts we can use while making the llm call 
+ - LangChainalso helps managingthe entire llm call workflow with chains
+******************************************************************************* 
+3.Explain the architecture of a basic LangChain application? 
+- LangChain architecture contains mainly three core components thet are 
+- PromptTemplate : whicu will provide us the prompt te,plate that can be used for acceoting dynamic variables also 
+- LLM : which can be used to invoke llms or crrating an agent 
+- OutputParser : which will parse the model response
+*****************************************************************************
+4. what are the main components of LangChain?
+Component	Purpose
+1. Models - 	Connect to LLMs such as GPT, Claude, Gemini, and Ollama.
+2. Prompt Templates - 	Create reusable prompts with dynamic variables.
+3. Output Parsers - 	Convert LLM responses into formats such as strings or structured data.
+4. Chains (LCEL) - 	Connect multiple components to create workflows.
+5. Tools - Allow agents to interact with APIs, databases, and Python functions.
+6. Agents- Use LLMs to decide which tools to call and how to complete tasks.
+7. Retrievers - 	Fetch relevant information from documents or vector databases for RAG.
+8. Memory / State	- Maintain conversation history and contextual information across interactions.
+********************************************************************************************
+5.What is the difference between invoke(), stream() and ainvoke()?
+- invoke() : it is a ynchronous execution ,waits until the comolete responses is generated 
+- ainvoke() : it is synchronous execution where remaining asynchronous executions can run while one is waiting 
+- stream() : stream the response in chunks once they are available 
+****************************************************************************
+6. How does LangChain support integration with different LLM providers?
+- Unified interfaces like invoke() , ainvoke() , stream() ans can be used with any models calling and invocation
+- provides packages like langchain-openai , langchain-anhropic etc 
+*****************************************************************************
+7. What is a PromptTemplate? How is it different from ChatPromptTemplate?
+- Both are used to create prompts that dynamically accepts variables 
+- PromptTemplate crates a single text prompt 
+- ChatPromptTemplate creates prompts that involves SystemMessage , HumanMessage , AIMessage
+********************************************************************************************
+8 . What is an OutputParser? Why do we need it?
+- Buddy, in LangChain, an OutputParser is a component that converts an LLM's respon
+se into a specific format, such as a string, JSON object, or Pydantic object.
+******************************************************************************************
+9. Explain StrOutputParser and JsonOutputParser?
+- StrOutputParser is used extract text response from LLM answers 
+- JsonOutputParser are used of structured responss from llms 
+**********************************************************************************
+10 . How would you ensure an LLM returns valid structured JSON?
+- Buddy, to ensure an LLM returns valid structured JSON in LangChain, I would use with_structured_output() with a Pydantic schema.
+*****************************************************************************************************
+11. What is LCEL ?
+Buddy, LCEL (LangChain Expression Language) is a declarative way to connect LangChain components using the pipe (|) operator to build LLM workflows.
+Key features
+1. Chaining: Connect prompts, models, and output parsers.
+2. Reusability: Build modular, reusable pipelines.
+3. Async support: Supports ainvoke() for asynchronous execution.
+4. Streaming: Supports stream() for incremental responses.
+5. Parallel execution: Supports RunnableParallel for concurrent operations.
+********************************************************************************************
+12 . what is a runnable interface ?
+- The Runnable interface is a standard execution abstraction in LangChain that provides methods such as invoke(), ainvoke(), stream(), and batch(). It allows 
+different LangChain components to be connected and executed consistently using LCEL.
+***********************************************************************************************
+13. Explain RunnableSequence and RunnableParallel?
+- Runnable sequence() : in runnable sequence components executes sequentially where one componennt becomes
+input of anothe component 
+ex : prompt | model |StrOutputParser()
+- RunnableParallel():  in runnable parallel components run concurrently 
+ex : 
+chains = RunnableParallel(
+    positive = Positive_chain , 
+    negative = negative_chain , 
+    security = security_chain
+)
+response = chains.invoke({"feature":"Login})
+**************************************************************************
+14 . What is RunnablePassthrough? When would you use it? 
+- Buddy, RunnablePassthrough is a LangChain component that passes its input to the next step without modifying it.
+-It is useful when you want to preserve the original input while performing additional operations in a chain.
+****************************************************************************************
+15 . Explain AIMessage.tool_calls and ToolMessage?
+- Buddy, in LangChain, AIMessage.tool_calls contains the tools the LLM wants to execute, whereas ToolMessage contains the result of an executed tool.
+16 . Explain the ReAct (Reasoning and Acting) pattern?
+- REACT is a agent pattern that reasons and make actions observe results and repeat the same task till the task is completed.
+*********************************************************************************************************
+***********************************************************************************************
+**************************************************************************************************************
+
+1. What is LangGraph? What problems does it solve?
+- LangGraph is a graph-based orchestration framework designed to build stateful, complex AI agents. 
+- It solves challenges such as managing agent state, controlling execution flow, handling cyclic workflows,
+- recovering from failures, and integrating human approval into agent execution. It is particularly useful 
+- for building reliable, long-running AI agent applications.
+- LangGraph controls the boundaries and execution flow, while the AI agent can make decisions within those boundaries.
+- The final point is we will create the workflow with langgraph and agent can make its own decisions in that workflow 
+
+***********************************************************************************************************
+2. what is the difference between langchain and langgraph ?
+- langchain will helps us to connect components like prompts , llms ,tool etc 
+- Langgraph  will allow us to have control over how workflows shoud be build over those components 
+***********************************************************************************************************
+3. Explain the architecture of a LangGraph workflow?
+- LangGraph follows a graph-based, stateful execution architecture.
+- A workflow consists of nodes connected by edges, with shared state carrying information between execution steps.
+- main components of langgraph are :
+- state : State is the shared data maintained throughout workflow execution.
+- nodes : Nodes are python functions that performs specific operations
+-edges : Edges determines which node to execute next 
+-edges are two types i) normal edge , ii)conditional edge 
+-START and END : entry and endpoints of the workflow
+-Checkpointer : A checkpointer saves graph execution state, enabling persistence, recovery, and resuming interrupted workflows.
+
+***************************************************************************
+4. What are StateGraph, START and END? 
+- StateGraph is a LangGraph class which is used to create workflows with nondes communicate through shared state
+- It allows us to : 
+- Define nodes(Python functions or agents)
+- Connect nodes using Edges
+- maintain shared state between nodes
+- maintain workflow
+- START : START is a special node that represents the starting of the workflow
+- END : End is a special workflow which represents the ending of a workflow
+***********************************************************************************
+5. What is the purpose of TypedDict in LangGraph?
+- TypedDict defines the schema of the shared state in LangGraph, specifying the keys and their expected data types 
+- so nodes can consistently read and update state.
+****************************************************************
+6. What is a node? How does LangGraph execute a node? 
+- a node is python function or unnable that performs a certain task in workflow 
+- a node can be : 
+- execution python logic 
+- an llm call or agent
+- tool of mcp
+- flow how  a node is executes is :
+- Langgraph reads the next node using edges 
+- the current state is shared with node 
+- node function willm be executed and update the state with new node resulst 
+- move to next nodes by using edges 
+*******************************************************************
+7. What is the difference between graph.compile() and graph.invoke()?
+- graph.compile() → Converts the graph definition into an executable workflow.
+- app.invoke() → Executes the compiled workflow with the provided input.
+******************************************************************************
+8 . What is the difference between nodes and edges?
+- Node: Performs a task or operation.
+- Edge: Defines the execution flow between nodes.
+**********************************************************
+9. What is add_edge()? Explain fixed sequential execution?
+- add_edge() is a method which  is used to create edges between nodes 
+- sequential execution means workflow will go in a practicular order with out any add_conditional_edges
+******************************************************************************************************************
+10 . What is add_conditional_edges()? How does routing work?
+- add_conditional_edges() will select the next node dynamically based on the current state 
+**********************************************************************************
+11. What happens when a conditional router returns a value
+    that is not present in the routing map?
+- Langgraph will raise an key error 
+*********************************************************************
+12 . What is a superstep in LangGraph? 
+- A superstep is a single execution cycle in LangGraph where scheduled nodes execute concurrently. Their state updates are synchronized and applied before the next superstep begins, enabling controlled parallel execution.
+*******************************************************************************
+13.  How do you create a synchronization point after
+    parallel node execution?
+- Buddy, in LangGraph, we create a synchronization point (fan-in) using add_edge() with a list of source nodes. 
+graph.add_edge(START, "A")
+
+# Parallel execution (fan-out)
+graph.add_edge("A", "B")
+graph.add_edge("A", "C")
+
+# Synchronization point (fan-in)
+graph.add_edge(["B", "C"], "D")
+
+graph.add_edge("D", END)
+
+*****************************************************************
+14 .What is a state reducer? Why is it required? 
+ A state reducer defines how LangGraph merges updates to a shared state field. It is particularly important during parallel execution, when multiple nodes update the same key. Reducers prevent conflicting updates and enable operations such as list concatenation, numerical addition, or custom merging.
+*************************************************************************
+15 . What happens when parallel nodes update the same statefield without an appropriate reducer?
+- Langgraph will return Invalid Update error 
+*******************************************************************
+16. What is checkpointing in LangGraph? 
+- Buddy, checkpointing in LangGraph is a mechanism that saves the graph's state and execution progress so the workflow can be resumed later.
+-Why is checkpointing needed?
+- Failure recovery: Resume from a saved checkpoint after an interruption.
+- Human-in-the-loop: Pause execution for human approval and resume afterward.
+- Conversation memory: Preserve state across multiple interactions.
+- Debugging: Inspect previous states and execution history.
+***************************************************************************
+17 .  What is the difference between InMemorySaver,
+    SqliteSaver and PostgresSaver?
+-all three are checkpointers in LangGraph. The main difference is where they store the graph's state and execution progress.
+-InMemorySaver saver saves the progress in RAM where SqliteSaver will save it in sql lite data base and PostgresSaver will save the state in extrnal db.
+********************************************************************************
+18 . What is thread_id? Why is it important?
+-thread_id identifies a particular execution thread in LangGraph's checkpointing system. It allows LangGraph to retrieve saved state, resume interrupted workflows, maintain conversation memory, and isolate different execution threads.
+- Remember: The checkpointer stores the state; thread_id identifies which saved execution history to retrieve.
+***************************************************************************
+19 . How does get_state_history() work?
+- get_state_history() retrieves an iterator of saved state snapshots for a specific thread, ordered from newest to oldest. It enables developers and testers to inspect state transitions, debug workflows, and identify checkpoints for replay.
+*************************************************
+20 .what is Time travel in  Langgraph?
+- Time travel is a feature in langgraph which allows us to swith back to previus stored checkpoints after that we can perform two tasks
+- Replay : we can re trigger the workflow from that particular point 
+- Modify : we can make changes at that point and run an alternative workflow path .
+*******************************************************************
+21. What is interrupt()? How does it pause graph execution?
+- Interrupt is a langgraph function which is used for stopping the graph execution at a certain point .
+- This is basically used in the human in the loop process
+- The flow is langgraph executed approval node 
+- The execution part reaches interrupt() part 
+- The execution will be paused 
+- Checkpoint stored the progress 
+- confirmation from human will come from Command(resume = True/False)
+- the execution will be completed.
+************************************************************
+22.What happens when a node resumes after an interrupt? 
+- When a node resumes after an interrupt, LangGraph re-executes the interrupted node from its beginning. The interrupt() function returns the supplied resume value, allowing the remaining code to execute normally. Previously completed nodes are not re-executed as part of normal resumption.
+****************************************************************************
+23.what is a subgraph? and why do we use it ?
+- A subgraph is a reusable graph embedded within a parent graph as a node. It helps manage complex workflows by improving modularity, reusability, maintainability, and independent state management.
+************************************************************
+24 .  Can two subgraphs have different state schemas?
+    How would you connect them?
+- Yes, subgraphs can have different state schemas. We connect them using wrapper functions that transform the parent graph's state into the subgraph's expected input and map the subgraph's output back into the parent state. 
+**********************************************************************************
+25. . What is Send() in LangGraph? How is it different
+    from normal conditional routing? 
+- Send() enables dynamic fan-out execution in LangGraph by invoking nodes with custom input states. Unlike normal conditional routing, which selects destination nodes, Send() allows multiple independent executions of the same node with different inputs.
+********************************************************************************
+26 . What is the difference between invoke() and stream()? 
+- invoke() executes the graph and returns its final output, whereas stream() provides incremental execution updates, enabling real-time monitoring, debugging, and progress tracking.
+- From an AI SDET perspective: stream() is particularly useful for validating intermediate node outputs, state transitions, and agent execution paths rather than testing only the final response.
+**********************************************************************
+27 .explain the streaming modes in langgraph ?
+- LangGraph provides five commonly used streaming modes that allow us to monitor graph execution in real time:
+
+- **updates:** Streams only the state updates returned by individual nodes.
+- **values:** Streams the complete graph state after each superstep.
+- **messages:** Streams LLM-generated message chunks along with their metadata.
+- **custom:** Streams developer-defined events or progress messages using `get_stream_writer()`.
+- **debug:** Streams detailed execution information, including node execution events, state and checkpoint information.
+
+These streaming modes are useful for real-time monitoring, debugging, tracking state transitions, and validating intermediate agent behaviour without waiting for the entire workflow to complete.
+
+LangGraph also supports using multiple streaming modes simultaneously.
+*********************************************************************
+ 28 .  How would you debug a failed node and inspect its
+    input, output and state?
+- To debug a failed node in LangGraph, I would use streaming, checkpointing, and tracing.
+- stream_mode="debug": Inspect detailed node execution events and identify where the failure occurred.
+- stream_mode="updates": Inspect individual node outputs and state updates.
+- get_state(): Retrieve the latest checkpointed graph state.
+- get_state_history(): Inspect previous state snapshots to understand what state was available before the failure.
+- LangSmith or Langfuse: Inspect detailed node inputs, outputs, LLM calls, tool calls, and exceptions when tracing is configured.
+- Time travel: Replay execution from a previous checkpoint to reproduce and investigate the failure. 
+
+************************************************************************

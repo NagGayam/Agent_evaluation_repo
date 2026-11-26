@@ -142,7 +142,6 @@ SECTION 3: PARALLEL EXECUTION AND STATE REDUCERS (64–69)
     How would you implement a custom reducer?
 
 SECTION 4: CHECKPOINTING AND PERSISTENCE (70–75)
-
 70. What is checkpointing in LangGraph?
 71. What is the role of a checkpointer?
 72. What is the difference between InMemorySaver,

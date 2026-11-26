@@ -1,0 +1,824 @@
+
+============================================================
+MANUAL TESTING INTERVIEW PREPARATION
+Experience: 3–5 Years
+Target Roles: QA Engineer | SDET | AI SDET
+Total Questions: 100
+============================================================
+
+SECTION 1: SOFTWARE TESTING FUNDAMENTALS
+============================================================
+1. What is software testing?
+
+Answer:
+Software testing is the process of evaluating an application
+to identify defects, verify business requirements and ensure
+that it behaves as expected.
+
+2. What is manual testing?
+
+Answer:
+Manual testing is the process of validating an application
+by executing test cases manually without using automation
+scripts to perform the test execution.
+
+3. What is the difference between QA and QC?
+
+Answer:
+QA is process-oriented and focuses on preventing defects.
+QC is product-oriented and focuses on identifying defects
+in the developed product.
+
+4. What is the difference between verification and validation?
+
+Answer:
+Verification checks whether we are building the product
+correctly as per specifications.
+Validation checks whether we are building the right product
+that satisfies user and business needs.
+
+5. What is the difference between static and dynamic testing?
+
+Answer:
+Static testing evaluates requirements, documents or code
+without executing the application.
+Dynamic testing evaluates the application by executing it.
+
+6. What are the different levels of software testing?
+
+Answer:
+- Unit testing: Testing individual components.
+- Integration testing: Testing component interactions.
+- System testing: Testing the complete application.
+- Acceptance testing: Validating business and user needs.
+
+7. What is the difference between black-box, white-box and
+   grey-box testing?
+
+Answer:
+Black-box testing validates functionality without knowing
+the internal code. White-box testing examines internal code
+and logic. Grey-box testing uses partial knowledge of the
+internal implementation.
+
+8. What are the seven principles of software testing?
+
+Answer:
+- Testing shows the presence, not absence, of defects.
+- Exhaustive testing is impossible.
+- Early testing saves time and cost.
+- Defects cluster together; tests lose effectiveness over time.
+- Testing is context-dependent; absence-of-defects fallacy.
+
+9. What is the difference between an error, defect and failure?
+
+Answer:
+An error is a human mistake.
+A defect is a flaw introduced into a software artifact.
+A failure occurs when the application does not behave
+as expected during execution.
+
+10. Is 100% defect-free software possible?
+
+Answer:
+We cannot guarantee that software is completely defect-free.
+Testing reduces risk and increases confidence, but exhaustive
+testing of every possible condition is generally impossible.
+
+
+============================================================
+SECTION 2: SDLC AND STLC
+============================================================
+
+11. What is SDLC?
+
+Answer:
+SDLC stands for Software Development Life Cycle.
+It is a structured process involving requirement analysis,
+planning, design, development, testing, deployment and
+maintenance of software.
+
+12. What is STLC?
+
+Answer:
+STLC stands for Software Testing Life Cycle.
+It defines the activities performed by the testing team
+to validate software quality in a systematic manner.
+
+13. What are the different phases of STLC?
+
+Answer:
+1. Requirement analysis
+2. Test planning
+3. Test case development
+4. Test environment setup and test execution
+5. Test cycle closure
+
+14. What is the difference between SDLC and STLC?
+
+Answer:
+SDLC covers the entire software development process.
+STLC specifically covers testing activities and is performed
+as part of the overall software development lifecycle.
+
+15. What are entry criteria and exit criteria?
+
+Answer:
+Entry criteria are the conditions that must be satisfied
+before starting a testing activity.
+Exit criteria are the conditions that must be satisfied
+before completing that testing activity.
+
+16. When should testing start in SDLC?
+
+Answer:
+Testing should start during the requirement analysis phase.
+Early involvement helps QA identify missing requirements,
+ambiguities and potential defects before development begins.
+
+17. What is shift-left testing?
+
+Answer:
+Shift-left testing is an approach where testing activities are introduced early in the SDLC rather than waiting until development is completed. 
+QA participates in requirement analysis, design reviews, early test case preparation and continuous testing to identify and prevent defects early,
+ reduce rework and improve software quality.
+
+18. What activities are performed during test closure?
+
+Answer:
+We prepare the test summary report, review test coverage,
+analyse defects, document unresolved risks, capture lessons
+learned and archive relevant testing artifacts.
+
+
+============================================================
+SECTION 3: TYPES OF SOFTWARE TESTING
+============================================================
+
+19. What is functional testing?
+
+Answer:
+Functional testing verifies whether application features
+work according to the specified business requirements.
+
+20. What is non-functional testing?
+
+Answer:
+Non-functional testing evaluates quality attributes such
+as performance, security, usability, reliability,
+accessibility and scalability.
+
+21. What is smoke testing?
+
+Answer:
+Smoke testing is a high-level validation of critical
+functionalities to determine whether a new build is stable
+enough for further detailed testing.
+
+22. What is sanity testing?
+
+Answer:
+Sanity testing is focused testing of a specific change
+and its closely related functionalities to determine
+whether they work as expected.
+
+23. What is the difference between smoke and sanity testing?
+
+Answer:
+Smoke testing provides broad and shallow coverage of
+critical application functionality.
+Sanity testing provides narrow and focused coverage
+of a particular change or fix.
+
+24. What is regression testing?
+
+Answer:
+Regression testing verifies that newly introduced changes
+have not negatively affected existing functionalities
+of the application.
+
+25. What is retesting?
+
+Answer:
+Retesting, also called confirmation testing, involves
+executing previously failed test cases after a defect
+has been fixed to confirm that the issue is resolved.
+
+26. What is the difference between regression and retesting?
+
+Answer:
+Retesting verifies whether a specific defect is fixed.
+Regression testing verifies whether the fix or change
+has introduced issues in existing functionalities.
+
+27. What is exploratory testing?
+
+Answer:
+Exploratory testing is an approach where test learning,
+design and execution happen together. Testers explore
+the application and adapt their tests based on findings.
+
+28. What is the difference between ad hoc and exploratory
+    testing?
+
+Answer:
+Ad hoc testing is comparatively informal and unstructured.
+Exploratory testing involves purposeful investigation
+guided by testing objectives, risks and observations.
+
+29. What is end-to-end testing?
+
+Answer:
+End-to-end testing validates a complete business workflow
+across integrated components and systems, from the initial
+user action to the final expected result.
+
+30. What is UAT? How is it different from system testing?
+
+Answer:
+User Acceptance Testing validates whether the application
+satisfies business needs and is acceptable to users.
+System testing validates the complete system against
+specified functional and non-functional requirements.
+
+
+============================================================
+SECTION 4: DEFECT MANAGEMENT AND BUG LIFE CYCLE
+============================================================
+
+31. Explain the defect life cycle.
+
+Answer:
+A typical defect lifecycle is:
+New -> Assigned -> In Progress -> Fixed -> Retest -> Closed.
+If the fix fails, the defect is reopened. Other statuses
+can include Rejected, Duplicate and Deferred.
+
+32. What is the difference between severity and priority?
+
+Answer:
+Severity represents the impact of a defect on the system.
+Priority represents how urgently the defect needs to be
+addressed based on business and release requirements.
+
+33. Give an example of high severity and high priority.
+
+Answer:
+Users are unable to log in to a production application.
+It blocks a critical functionality and requires immediate
+attention.
+
+34. Give an example of high severity and low priority.
+
+Answer:
+The application crashes when accessing an obsolete feature
+that is rarely used and has an available workaround.
+The technical impact is high, but business urgency is low.
+
+35. Give an example of low severity and high priority.
+
+Answer:
+The company name is misspelled on a public homepage
+before a major product launch. Functionality is unaffected,
+but the issue must be corrected quickly.
+
+36. Give an example of low severity and low priority.
+
+Answer:
+A minor alignment issue in a rarely accessed settings
+page that does not affect functionality or usability
+significantly.
+
+37. What information should a good defect report contain?
+
+Answer:
+Defect title, description, environment, build version,
+preconditions, reproduction steps, expected result,
+actual result, severity, priority and supporting evidence.
+
+38. What is defect triage?
+
+Answer:
+Defect triage is a collaborative process where QA,
+developers and product stakeholders review defects,
+assess their impact, set priorities and decide how
+and when they should be resolved.
+
+39. What would you do if a developer rejects your defect?
+
+Answer:
+I would review the requirements, reproduce the issue,
+collect evidence and explain the business impact.
+If disagreement continues, I would involve the product
+owner or QA lead for clarification.
+
+40. What is defect leakage?
+
+Answer:
+Defect leakage occurs when a defect is missed during
+a testing phase and identified in a subsequent phase,
+such as UAT or production.
+
+41. What is root cause analysis (RCA)?
+
+Answer:
+RCA is the process of identifying the underlying reason
+for a defect and understanding why it was not prevented
+or detected earlier, so recurrence can be avoided.
+
+42. How would you handle a non-reproducible defect?
+
+Answer:
+I would collect logs, timestamps, environment details,
+user data and reproduction evidence. I would investigate
+different conditions and document my findings instead
+of immediately closing the defect.
+
+
+============================================================
+SECTION 5: TEST CASE DESIGN TECHNIQUES
+============================================================
+
+43. What is the difference between a test scenario and
+    a test case?
+
+Answer:
+A test scenario describes what needs to be tested.
+A test case describes how to test it, including steps,
+test data, preconditions and expected results.
+
+44. What are the characteristics of a good test case?
+
+Answer:
+A good test case is clear, traceable, repeatable,
+maintainable and independently executable where possible.
+It contains specific steps and measurable expected results.
+
+45. What is positive testing?
+
+Answer:
+Positive testing validates the application using valid
+inputs to ensure it performs the expected functionality.
+Example: Logging in with valid credentials.
+
+46. What is negative testing?
+
+Answer:
+Negative testing validates how the application handles
+invalid inputs and unexpected conditions.
+Example: Logging in with an incorrect password.
+
+47. What is Boundary Value Analysis (BVA)?
+
+Answer:
+BVA is a technique that tests values at and near the
+boundaries of an input range.
+For an inclusive range of 18–60, test values could be
+17, 18, 19, 59, 60 and 61.
+
+48. What is Equivalence Partitioning (EP)?
+
+Answer:
+EP divides input data into groups expected to behave
+similarly and selects representative values from each.
+For an accepted age of 18–60, partitions are below 18,
+18–60 and above 60.
+
+49. What is the difference between BVA and EP?
+
+Answer:
+EP reduces test cases by dividing inputs into equivalent
+groups. BVA focuses on values at or near the boundaries
+because defects frequently occur at those points.
+
+50. What is decision table testing?
+
+Answer:
+Decision table testing validates combinations of business
+conditions and their corresponding actions.
+It is useful for discounts, eligibility rules, permissions
+and other conditional business logic.
+
+51. What is state transition testing?
+
+Answer:
+State transition testing validates how a system moves
+between different states based on events or actions.
+Example: An account changes from active to locked
+after three consecutive failed login attempts.
+
+52. What is error guessing?
+
+Answer:
+Error guessing is an experience-based technique where
+testers identify potential defects using previous knowledge.
+Examples include null values, duplicate submissions,
+special characters and unexpected interruptions.
+
+
+============================================================
+SECTION 6: TEST PLANNING, DOCUMENTATION AND METRICS
+============================================================
+
+53. What is a test plan?
+
+Answer:
+A test plan is a document describing the testing scope,
+objectives, approach, resources, schedule, environment,
+risks, deliverables and entry and exit criteria.
+
+54. What is the difference between a test plan and
+    a test strategy?
+
+Answer:
+A test strategy defines the overall testing approach
+and principles. A test plan applies the approach to
+a specific project, release or testing activity.
+
+55. What is a Requirement Traceability Matrix (RTM)?
+
+Answer:
+RTM maps requirements to their corresponding test cases
+and, where applicable, defects. It helps identify missing
+coverage and track requirement validation.
+
+56. What is the difference between test coverage and
+    code coverage?
+
+Answer:
+Test coverage measures how much of the identified
+requirements, risks or test conditions are covered.
+Code coverage measures how much source code is exercised
+during test execution.
+
+57. What is risk-based testing?
+
+Answer:
+Risk-based testing prioritizes testing activities based
+on the likelihood of failure and potential business impact.
+High-risk and business-critical areas are tested first.
+
+58. How do you estimate testing effort?
+
+Answer:
+I consider requirement complexity, test design, execution,
+test data preparation, integration dependencies, regression,
+defect retesting, available resources and uncertainty.
+
+59. What testing metrics do you track?
+
+Answer:
+Test execution progress, pass/fail rate, requirement
+coverage, defect count by severity, defect leakage,
+defect reopening rate and unresolved release risks.
+
+60. How do you calculate test case pass percentage?
+
+Answer:
+Pass percentage = (Passed test cases / Executed test cases)
+x 100.
+I clearly define how blocked and skipped tests are reported.
+
+61. What is Defect Removal Efficiency (DRE)?
+
+Answer:
+DRE measures how effectively defects are identified
+before release.
+DRE = Pre-release defects / (Pre-release defects +
+Post-release defects) x 100, for a defined release period.
+
+62. When do you stop testing?
+
+Answer:
+Testing can be completed when agreed exit criteria are met,
+critical workflows are validated, unacceptable defects
+are resolved and remaining risks are reviewed and accepted
+by authorized stakeholders.
+
+
+============================================================
+SECTION 7: AGILE AND SCRUM
+============================================================
+
+63. What is Agile methodology?
+
+Answer:
+Agile is an iterative and incremental approach to software
+development that emphasizes collaboration, continuous
+feedback, adaptability and frequent delivery of value.
+
+64. What is the difference between Agile and Waterfall?
+
+Answer:
+Waterfall follows relatively sequential development phases.
+Agile delivers software incrementally and adapts to
+changing requirements through frequent feedback.
+
+65. What is Scrum?
+
+Answer:
+Scrum is an Agile framework where teams deliver value
+through fixed-length iterations called sprints, using
+defined accountabilities, events and artifacts.
+
+66. What is a sprint?
+
+Answer:
+A sprint is a fixed-length Scrum event of one month
+or less, during which the team works toward a Sprint Goal
+and creates a usable product increment.
+
+67. What are the different Scrum events?
+
+Answer:
+- Sprint
+- Sprint Planning
+- Daily Scrum
+- Sprint Review
+- Sprint Retrospective
+
+68. What is the role of QA in an Agile team?
+
+Answer:
+QA participates in requirement discussions, identifies
+risks, designs and executes tests, reports defects,
+performs regression and collaborates with the team
+throughout the sprint to maintain product quality.
+
+69. What is the difference between an epic, user story
+    and task?
+
+Answer:
+An epic represents a large business objective or feature.
+A user story describes a specific user need.
+A task represents actionable work required to achieve it.
+
+70. What are acceptance criteria?
+
+Answer:
+Acceptance criteria are specific conditions that a user
+story or feature must satisfy to be accepted.
+They help QA determine expected behavior and derive tests.
+
+71. What is the difference between Definition of Ready
+    (DoR) and Definition of Done (DoD)?
+
+Answer:
+DoR is an optional team agreement describing when work
+is sufficiently understood to begin.
+DoD defines the quality standards an increment must
+satisfy to be considered completed.
+
+72. How do you handle requirement changes during a sprint?
+
+Answer:
+I discuss the change with stakeholders, analyse its
+impact on coverage, dependencies and testing effort,
+update affected test cases and communicate any risks
+or changes to the sprint plan.
+
+
+============================================================
+SECTION 8: API, DATABASE AND WEB APPLICATION TESTING
+============================================================
+
+73. What is API testing?
+
+Answer:
+API testing validates communication between software
+components by checking requests, responses, business logic,
+status codes, authentication, error handling and data integrity.
+
+74. What are the commonly used HTTP methods?
+
+Answer:
+GET retrieves data; POST submits data for processing.
+PUT generally replaces a resource representation.
+PATCH partially modifies a resource.
+DELETE removes a resource association.
+
+75. What are the common HTTP status codes?
+
+Answer:
+200 OK, 201 Created, 204 No Content.
+400 Bad Request, 401 Authentication Required or Invalid.
+403 Forbidden, 404 Not Found, 409 Conflict.
+429 Too Many Requests, 500 Internal Server Error,
+503 Service Unavailable.
+
+76. What would you validate while testing an API?
+
+Answer:
+I validate status codes, response body, schema, headers,
+business logic, response time, authentication, authorization,
+negative inputs, error handling and database changes.
+
+77. What is the difference between authentication and
+    authorization?
+
+Answer:
+Authentication verifies the identity of a user.
+Authorization determines which resources and operations
+that authenticated user is permitted to access.
+
+78. What is idempotency in API testing?
+
+Answer:
+Idempotency means repeating an identical request has
+the same intended effect on the server as executing it once.
+For example, retrying an idempotent payment operation
+should not create duplicate charges.
+
+79. How do you perform database testing?
+
+Answer:
+I validate data insertion, updates, deletion, retrieval,
+relationships, constraints and data integrity.
+I use database queries to compare actual stored data
+with expected application behavior.
+
+80. What is the difference between INNER JOIN and LEFT JOIN?
+
+Answer:
+INNER JOIN returns rows that satisfy the join condition
+in both tables. LEFT JOIN returns all rows from the left
+table and matching rows from the right table, with NULLs
+for unmatched right-table columns.
+
+81. How do you identify whether a defect is in the frontend
+    or backend?
+
+Answer:
+I inspect browser console errors, network requests,
+API responses and server logs. If the API returns correct
+data but the UI displays it incorrectly, I investigate
+the frontend. I use evidence to isolate the actual cause.
+
+82. What is cross-browser compatibility testing?
+
+Answer:
+It verifies that application functionality, layout and
+user experience work consistently across supported
+browsers, browser versions and operating environments.
+
+
+============================================================
+SECTION 9: REAL-TIME SCENARIO-BASED QUESTIONS
+============================================================
+
+83. How would you test a login page?
+
+Answer:
+I would validate valid and invalid credentials, empty
+fields, password masking, account locking, error messages,
+forgot password, session handling and authorization
+after successful login.
+
+84. How would you test an e-commerce shopping cart?
+
+Answer:
+I would validate adding and removing products, quantity
+updates, stock availability, price calculations, discounts,
+taxes, cart persistence and checkout integration.
+
+85. How would you test a payment gateway?
+
+Answer:
+I would validate successful, failed, pending and cancelled
+payments, transaction timeouts, duplicate requests, webhooks,
+refunds and consistency between payment, order and wallet
+statuses.
+
+86. How would you test a search and filter functionality?
+
+Answer:
+I would validate exact and partial matches, case sensitivity,
+special characters, empty queries, no-result conditions,
+multiple filters, sorting, pagination and filter reset
+according to the requirements.
+
+87. How would you test a file upload functionality?
+
+Answer:
+I would validate supported and unsupported file formats,
+file size boundaries, empty or corrupted files, duplicate
+files, permission restrictions, upload interruption and
+successful storage or processing.
+
+88. How would you test an application without requirements?
+
+Answer:
+I would understand the business objective, consult
+stakeholders, review existing functionality, explore
+the application, identify critical workflows and document
+assumptions and mutually agreed expected behavior.
+
+89. What would you do if you have 100 test cases but
+    only enough time to execute 30?
+
+Answer:
+I would prioritize business-critical workflows, recent
+changes, high-risk integrations and previously defective
+areas. I would communicate untested coverage and
+remaining risks to stakeholders before release.
+
+90. How would you handle a critical production defect?
+
+Answer:
+I would confirm the issue, assess customer impact,
+collect evidence and notify relevant stakeholders.
+I would support mitigation, validate the fix, perform
+targeted regression and participate in RCA.
+
+91. What would you do if a critical defect is identified
+    just before release?
+
+Answer:
+I would immediately report the defect with evidence
+and explain its business impact. I would recommend
+blocking the release if the risk is unacceptable.
+The final release decision belongs to authorized stakeholders.
+
+92. How do you perform impact analysis for a new feature?
+
+Answer:
+I analyse the changed requirements, dependent modules,
+shared components, APIs, database changes and existing
+workflows to identify affected functionalities and
+determine the required regression coverage.
+
+93. How do you handle a defect that occurs intermittently?
+
+Answer:
+I investigate patterns involving test data, timing,
+network conditions, concurrency and environment.
+I capture timestamps, logs and recordings to identify
+the conditions under which the defect occurs.
+
+94. How do you ensure a feature is ready for production?
+
+Answer:
+I verify acceptance criteria, critical workflows,
+integration and regression coverage, resolve unacceptable
+defects, validate the release candidate and communicate
+test results and residual risks to stakeholders.
+
+95. Tell me about a challenging defect you identified.
+
+Answer:
+I would explain the actual issue, its business impact,
+how I reproduced and investigated it, how I collaborated
+with developers and how I validated the fix and prevented
+regression using the STAR method.
+
+
+============================================================
+SECTION 10: MANUAL TESTING OF AI APPLICATIONS
+============================================================
+
+96. How is AI application testing different from traditional
+    software testing?
+
+Answer:
+Traditional software often has predictable expected outputs.
+AI applications can produce different valid responses
+for the same input. AI testing therefore includes accuracy,
+relevance, consistency, safety and task completion.
+
+97. How do you manually test an AI chatbot?
+
+Answer:
+I validate response accuracy, relevance, hallucinations,
+conversation context, instruction following, unsupported
+queries, unsafe prompts and fallback behavior across
+different conversation scenarios.
+
+98. How do you test an AI application when its output
+    is non-deterministic?
+
+Answer:
+I define acceptance criteria based on meaning and task
+success instead of exact text. I execute representative
+inputs multiple times and evaluate consistency, correctness
+and compliance using an agreed evaluation rubric.
+
+99. What is a golden dataset in AI testing?
+
+Answer:
+A golden dataset is a curated collection of representative
+test inputs with trusted reference answers, expected actions
+or evaluation criteria. It is used to measure and compare
+AI application quality consistently.
+
+100. How would you manually test an AI agent?
+
+Answer:
+I validate task completion, tool selection, tool arguments,
+tool responses, multi-step reasoning behavior, state
+management, error recovery and permission boundaries
+using expected outcomes and execution traces.
+
+
+============================================================
+END OF INTERVIEW PREPARATION
+============================================================
