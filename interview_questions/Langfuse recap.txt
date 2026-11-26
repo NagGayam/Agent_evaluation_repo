@@ -1,0 +1,256 @@
+1. What is Langfuse, and why is it used in LLM applications? 
+- Langfuse is an opnesource LLM engineering and observability platform which is used to 
+- monitor  , trace , debug , evaluate and improve llm applications
+
+********************************************************************************************
+2.What are the major features provided by Langfuse?
+- The major features provided by **Langfuse** are:
+
+1. **Tracing:** Tracks end-to-end execution, including LLM calls, tool calls, inputs and outputs.
+2. **Observability:** Monitors application behaviour, errors and execution flow.
+3. **Evaluations:** Supports custom evaluation metrics, LLM-as-a-judge and human feedback.
+4. **Datasets:** Creates and manages golden datasets for testing.
+5. **Experiments:** Executes datasets against different models, prompts or application versions and compares results.
+6. **Prompt Management:** Stores, versions and manages prompts centrally.
+7. **Cost and Token Monitoring:** Tracks token consumption and LLM costs.
+8. **Latency Monitoring:** Measures response times and identifies performance bottlenecks.
+9. **Analytics and Dashboards:** Visualises evaluation scores, errors and application performance.
+
+**From an AI SDET perspective**, the most important features are Tracing, Evaluations, Datasets and Experiments.
+
+**************************************************************************************************************
+3. What is LLM observability, and why is it important?
+- LLM observability is the ability to monitor, trace and understand the internal execution and behaviour of LLM-based applications.
+*****************************************************************************************************
+4.  What is the difference between traditional application
+   monitoring and LLM observability?
+- Traditional application monitoring focuses on system health and performance, whereas LLM observability focuses on system performance, AI behaviour and response quality.
+- An AI agent returns an incorrect answer with HTTP status 200.
+- Traditional monitoring: May consider the request successful because no technical error occurred.
+- LLM observability: Combined with evaluations, can identify incorrect retrieval, tool selection or response generation.
+************************************************************************************************************************
+5. Explain the concepts of Trace, Observation, Span,
+   and Generation in Langfuse.
+1. Trace
+Represents the complete end-to-end execution of a single request or workflow in an LLM application.
+2. Observation
+Represents an individual operation within a trace. Spans and Generations are types of observations.
+3. Span
+Represents an operation that has a start and end time, such as tool execution, document retrieval or API calls.
+4. Generation
+A specialised observation representing an LLM call. It captures the model name, prompts, responses, token usage, cost and latency.
+************************************************************************************************************************************************
+6. How would you integrate Langfuse into an existing
+    Python-based LLM application?
+- we need to install langfuse SDK 
+- Configure Langfuse credentials
+- Intialize langfuse client with get_client
+- instrument your llm calls with @observe tag 
+- use langfuse.flush() to send the traces back to langfuse platform before script exits 
+- we can use CallbackHandler for LangChain ad Langgrpah integration with langfuse
+**********************************************************************************************
+7. How do you initialize the Langfuse Python SDK?
+- we can use get_client() method to initialize the langfuse in our application.
+- for the in .env keep langfuse creds and url of your project 
+- load them with your load_dotenv()
+- then use get_client() methods to initialize the langfuse in that code 
+****************************************************************************************
+8.What is start_as_current_observation()? 
+-start_as_current_observation() is a Langfuse SDK method used to manually create an observation and make it the active observation within a context.
+- It is useful for tracing specific operations such as LLM calls, tool execution, document retrieval and data processing.
+from langfuse import get_client
+
+langfuse = get_client()
+
+with langfuse.start_as_current_observation(
+    name="calculate-pass-rate",
+    as_type="span",
+    input={"passed": 80, "total": 100}
+) as span:
+
+    result = (80 / 100) * 100
+    span.update(output=result)
+
+langfuse.flush()
+*************************************************************************************************************************************
+9.What is the difference between manually creating observations and using LangChain callbacks?
+- The main difference is manual control vs automatic tracing.
+
+Manual Observation : 
+with langfuse.start_as_current_observation(
+    name="retrieve-documents",
+    as_type="retriever"
+) as span:
+    result = retrieve_documents()
+    span.update(output=result)
+
+Langchain call back : 
+from langfuse.langchain import CallbackHandler
+
+handler = CallbackHandler()
+
+response = chain.invoke(
+    {"question": "What is RAG?"},
+    config={"callbacks": [handler]}
+)
+
+*************************************************************************************************
+10 .How do you integrate Langfuse with LangChain? 
+- we use CallbackHandler to integrate langFuse in chain 
+
+from  langfuse.langchain import CallbackHandler
+form dotenv import load_dotenv()
+from langchain_openai import ChatopenAI 
+from langchain_core.prompts import ChatPromptTemplate 
+from langchain.parsers import StrOutputParser
+
+load_dotenv()
+model = ChatopenAI(model = "gpt-4.1-mini" , temperature = 0.2,api_key = key)
+prompt = ChatPromptTemplate.from_template("hey please tell me a joke on feature :{feature})
+
+chain = prompt|model|StrOutputParser()
+handler = CallbackHandler()
+result = chain.invoke({"feature" :"Mathematics" },config = {"callbacks":[handler]})
+print(result.content)
+
+***************************************************************************************************
+11. how can we integrate the Langfuse with Langgrpah ? 
+- we integrate the same way how we do with langchain 
+- by passing CallbackHandler in the configuration 
+
+from dotenv import load_dotenv
+from langfuse.langchain import CallbackHandler
+
+load_dotenv()
+
+handler = CallbackHandler()
+
+# Compile the LangGraph workflow
+app = graph.compile()
+
+# Execute with Langfuse tracing
+response = app.invoke(
+    {"messages": [("user", "What is RAG?")]},
+    config={"callbacks": [handler]}
+)
+
+print(response)
+
+*********************************************************************************************************
+12 . How can you trace a multi-step LLM workflow? 
+ - We can trace a multi-step LLM workflow by creating a parent observation and nesting individual operations as child observations using start_as_current_observation().
+
+********************************************************************************************************
+13 . How do you capture input and output information for an LLM execution?
+- In Langfuse, we can capture LLM inputs and outputs using the input parameter while creating an observation and the update() method after execution. 
+
+with langfuse.start_as_current_observation(
+    name="llm-execution",
+    as_type="generation",
+    model="gpt-4.1-mini",
+    input="What is RAG?"
+) as generation:
+
+    response = model.invoke("What is RAG?")
+
+    generation.update(output=response.content)
+
+langfuse.flush()
+
+********************************************************************************************************
+14 . How would you instrument an MCP server and capture
+     individual MCP tool executions in Langfuse?
+
+- We can instrument an MCP server by wrapping individual MCP tool functions with Langfuse's @observe(as_type="tool") decorator. 
+- This captures each tool's execution, input arguments, output, latency and errors. 
+
+from mcp.server.fastmcp import FastMCP
+from langfuse import observe, get_client
+from dotenv import load_dotenv
+
+load_dotenv()
+
+langfuse = get_client()
+mcp = FastMCP("QA Tools")
+
+@mcp.tool()
+@observe(as_type="tool")
+def calculate_pass_rate(passed: int, total: int):
+    return (passed / total) * 100
+
+@mcp.tool()
+@observe(as_type="tool")
+def calculate_fail_rate(failed: int, total: int):
+    return (failed / total) * 100
+
+if __name__ == "__main__":
+    mcp.run() 
+
+*********************************************************************************************************
+15 . What are scores in Langfuse? 
+- Scores in langfuse are evaluation results 
+- scores can be of three types : 
+- numerical , boolean , categorical
+***************************************************************************************
+16 , How do you execute an entire dataset using
+    the Langfuse Python SDK?
+- We can execute an entire dataset using the dataset.run_experiment() method provided by the Langfuse Python SDK. 
+
+from langfuse import get_client
+
+langfuse = get_client()
+
+# Fetch the dataset from Langfuse
+dataset = langfuse.get_dataset("golden-dataset")
+
+# Define the application execution logic
+def task(*, item, **kwargs):
+    response = agent.invoke(item.input)
+    return response
+
+# Execute the entire dataset
+result = dataset.run_experiment(
+    name="Agent Regression Testing",
+    task=task,
+    max_concurrency=5
+)
+
+print(result.format())
+
+langfuse.flush() 
+
+****************************************************************************************************
+17 . How do you attach evaluation scores to
+    individual dataset experiment results? 
+- We can attach evaluation scores to individual dataset experiment results by passing custom evaluator functions to the evaluators parameter of dataset.run_experiment().
+
+Each evaluator runs against the output of every dataset item and returns an Evaluation object containing the score
+
+from langfuse import get_client, Evaluation
+
+langfuse = get_client()
+dataset = langfuse.get_dataset("golden-dataset")
+
+def task(*, item, **kwargs):
+    return agent.invoke(item.input)
+
+# Custom evaluator
+def correctness(*, input, output, expected_output, **kwargs):
+
+    score = 1.0 if output == expected_output else 0.0
+
+    return Evaluation(
+        name="correctness",
+        value=score
+    )
+
+result = dataset.run_experiment(
+    name="Agent Regression Testing",
+    task=task,
+    evaluators=[correctness]
+)
+
+langfuse.flush()
+
+
+***************************************************************************************
