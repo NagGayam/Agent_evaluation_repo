@@ -1,0 +1,444 @@
+
+========================================================
+GIT INTERVIEW PREPARATION
+Experience: 3+ Years
+Target Roles: QA | SDET | AI SDET
+Total Questions: 35
+========================================================
+
+SECTION 1: GIT FUNDAMENTALS
+========================================================
+
+1. What is Git?
+
+Answer:
+Git is a distributed version control system used to
+track code changes, maintain version history and enable
+multiple developers to collaborate on the same project.
+
+
+2. What is the difference between Git and GitHub?
+
+Answer:
+Git is a version control system used to manage code
+changes. GitHub is a platform that hosts Git repositories
+and provides collaboration, code review and CI/CD features.
+
+
+3. What is a Git repository?
+
+Answer:
+A Git repository is a storage location that contains
+project files, commit history, branches and other
+version control information.
+
+
+4. What are the three main areas in Git?
+
+Answer:
+- Working directory: Where we modify project files.
+- Staging area: Where we prepare changes for a commit.
+- Local repository: Where committed changes are stored.
+
+
+5. What is the difference between git init and git clone?
+
+Answer:
+git init initializes a new Git repository.
+git clone creates a local copy of an existing repository,
+including its available version history.
+
+Commands:
+git init
+git clone <repository_url>
+
+
+6. What is the difference between git add, git commit
+   and git push?
+
+Answer:
+git add moves selected changes to the staging area.
+git commit saves staged changes to the local repository.
+git push uploads local commits to the remote repository.
+
+
+7. What is git status?
+
+Answer:
+git status displays the current branch and the status
+of modified, staged and untracked files.
+
+Command:
+git status
+
+
+8. What is git log?
+
+Answer:
+git log displays the commit history of a repository,
+including commit IDs, authors, dates and commit messages.
+
+Commands:
+git log
+git log --oneline
+
+
+9. What is git diff?
+
+Answer:
+git diff displays differences between versions of files.
+By default, it shows unstaged changes, whereas
+git diff --staged shows staged changes.
+
+Commands:
+git diff filename 
+git diff --staged file name
+
+
+10. What is HEAD in Git?
+
+Answer:
+HEAD represents the current checkout. Normally, it
+points to the current branch, which in turn points
+to its latest commit.
+
+
+========================================================
+SECTION 2: BRANCHING AND REMOTE REPOSITORIES
+========================================================
+
+11. What is a branch in Git?
+
+Answer:
+A branch is a separate line of work in your repo. 
+It lets you make changes without touching the main code until you're ready.
+
+
+12. How do you create and switch between branches?
+
+Answer:
+We use git branch to create a branch and git switch
+or git checkout to switch between branches.
+
+Commands:
+git branch feature/login-tests
+git switch feature/login-tests
+
+Create and switch in a single command:
+git switch -c feature/login-tests
+
+Alternative:
+git checkout -b feature/login-tests
+
+
+13. What is origin in Git?
+
+Answer:
+Origin is the default name commonly assigned to the
+remote repository when we clone a Git repository.
+
+Command:
+git remote -v
+
+
+14. What is the difference between main and origin/main?
+
+Answer:
+main is the local branch.
+origin/main is a local remote-tracking reference that
+represents the last known state of the remote main branch.
+
+
+15. What is the difference between git fetch and git pull?
+
+Answer:
+git fetch downloads remote changes without integrating
+them into the current branch.
+git pull downloads and integrates remote changes into
+the current branch using merge, rebase or fast-forward.
+
+Commands:
+git fetch origin
+git pull origin main
+
+
+16. How do you push a newly created branch to GitHub?
+
+Answer:
+We use git push with the -u option to upload the branch
+and establish its upstream tracking relationship.
+
+Command:
+git push -u origin feature/login-tests
+
+Subsequent pushes can use:
+git push
+
+
+17. How do you delete a branch locally and remotely?
+
+Answer:
+git branch -d deletes a local branch when Git considers
+it safe. git push --delete deletes a remote branch.
+
+Commands:
+git branch -d feature/login-tests
+git push origin --delete feature/login-tests
+
+
+========================================================
+SECTION 3: MERGING, REBASING AND CONFLICTS
+========================================================
+
+18. What is git merge?
+
+Answer:
+git merge integrates changes from another branch into
+the current branch. It preserves existing commit history
+and may create a merge commit.
+
+Example:
+git switch main
+git merge feature/login-tests
+
+
+19. What is git rebase?
+
+Answer:
+git rebase moves your branch's commits so they sit on top of the latest commit of another branch,
+as if you had started your work from there.
+Example:
+git switch feature/login-tests
+git rebase main
+
+
+20. What is the difference between git merge and git rebase?
+
+Answer:
+Merge integrates branches while preserving their
+existing commit history and may create a merge commit.
+Rebase reapplies commits on a new base and rewrites
+their commit IDs to create a linear history.
+
+Avoid rebasing shared branches without coordination.
+
+
+21. What is a merge conflict?
+
+Answer:
+A merge conflict occurs when Git cannot automatically
+combine changes from different branches.
+
+For example, two developers modify the same lines
+of a shared Playwright page object differently.
+
+
+22. How do you resolve a merge conflict?
+
+Answer:
+1. Use git status to identify conflicting files.
+2. Open the files and resolve conflicting changes.
+3. Validate the changes by executing relevant tests.
+4. Stage the resolved files using git add.
+5. Complete the merge using git commit.
+
+For a rebase conflict, use git rebase --continue
+after staging the resolved files.
+
+
+23. What is a pull request?
+
+Answer:
+A pull request is a request to review and integrate
+changes from one branch into another branch.
+It enables code review, automated quality checks
+and team collaboration before merging.
+
+
+========================================================
+SECTION 4: UNDOING AND MANAGING CHANGES
+========================================================
+
+24. What is git stash?
+
+Answer:
+git stash temporarily saves uncommitted changes,
+allowing us to switch branches or perform other
+operations without committing incomplete work.
+
+Commands:
+git stash
+git stash list
+git stash -u
+
+The -u option also includes untracked files.
+
+
+25. What is the difference between git stash pop and
+    git stash apply?
+
+Answer:
+git stash apply restores the stashed changes while
+keeping the stash entry.
+git stash pop restores the changes and removes the
+stash entry if the operation succeeds.
+
+
+26. What is git reset?
+
+Answer:
+git reset is used to update the current branch,
+staging area and optionally the working directory.
+It can be used to undo local commits or unstage changes.
+
+Example:
+git reset --soft HEAD~1
+
+
+27. What is git revert?
+
+Answer:
+git revert creates a new commit that reverses the
+changes introduced by a previous commit without
+rewriting existing commit history.
+
+Command:
+git revert <commit_id>
+
+
+28. What is the difference between git reset and git revert?
+
+Answer:
+git reset can move the branch pointer backwards and
+rewrite local commit history.
+git revert creates a new commit that undoes changes
+while preserving existing history.
+
+Revert is generally safer for shared branches.
+
+
+29. What is the difference between git reset --soft,
+    --mixed and --hard?
+
+Answer:
+--soft: Moves HEAD but keeps changes staged.
+--mixed: Moves HEAD and unstages changes, keeping files.
+--hard: Moves HEAD and resets staged and working changes.
+
+Be careful with --hard because it can discard local work.
+
+Commands:
+git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git reset --hard HEAD~1
+
+
+30. What is git cherry-pick?
+
+Answer:
+git cherry-pick applies the changes introduced by a
+specific commit from another branch to the current
+branch without merging the entire branch.
+
+Command:
+git cherry-pick <commit_id>
+
+
+31. What is .gitignore?
+
+Answer:
+.gitignore specifies untracked files and directories
+that Git should ignore.
+
+Example:
+.env
+.venv/
+__pycache__/
+reports/
+playwright-report/
+
+It does not automatically stop tracking files that
+are already tracked by Git.
+
+
+========================================================
+SECTION 5: PRACTICAL SCENARIO-BASED QUESTIONS
+========================================================
+
+32. You accidentally committed incorrect changes.
+    How would you undo them?
+
+Answer:
+If the commit is local and I want to retain the changes,
+I would use git reset --soft HEAD~1.
+If the commit is already pushed to a shared branch,
+I would use git revert to preserve commit history.
+
+
+33. You are working on automation scripts and suddenly
+    need to switch branches without committing.
+    What would you do?
+
+Answer:
+I would temporarily save my changes using git stash,
+switch to the required branch, complete my work,
+return to the original branch and restore my changes.
+
+Commands:
+git stash -u
+git switch main
+
+After completing the required work:
+git switch feature/login-tests
+git stash pop
+
+
+34. You accidentally committed and pushed an API key
+    or .env file. What would you do?
+
+Answer:
+I would immediately revoke or rotate the exposed key,
+notify the appropriate team, remove the secret from
+the repository and add the file to .gitignore.
+I would coordinate history cleanup if necessary.
+
+To stop tracking the file:
+git rm --cached .env
+
+Note:
+Removing the file in a new commit does not remove
+the secret from previous commits.
+
+
+35. Explain the Git workflow you follow in your
+    automation project.
+
+Answer:
+I create a feature branch from the latest main branch,
+implement and validate automation scripts, stage and
+commit my changes, push the branch and raise a pull
+request. After code review and CI checks, it is merged.
+
+Example workflow:
+
+git switch main
+git pull origin main
+
+git switch -c feature/login-automation
+
+# Implement and validate automation scripts
+
+git status
+git add tests/test_login.py
+git commit -m "Add login automation test cases"
+
+git push -u origin feature/login-automation
+
+# Raise a pull request
+# Complete code review and CI checks
+# Merge the approved changes
+
+
+========================================================
+END OF GIT INTERVIEW PREPARATION
+========================================================
